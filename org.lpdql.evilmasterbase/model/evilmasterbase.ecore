@@ -13,7 +13,8 @@
         eType="#//Entree" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="localisation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Salle" eSuperTypes="#//DescribedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="SalleElement" abstract="true" interface="true"
+      eSuperTypes="#//DescribedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sbire" upperBound="-1"
         eType="#//Sbire" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="piege" upperBound="-1"
@@ -22,13 +23,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="Sbire" eSuperTypes="#//PricedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="arme" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Bureau" eSuperTypes="#//Salle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Bureau" eSuperTypes="#//SalleElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Porte" eSuperTypes="#//PricedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="salle" lowerBound="2" upperBound="2"
-        eType="#//Salle"/>
+        eType="#//SalleElement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Piege" eSuperTypes="#//PricedElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Entree" eSuperTypes="#//Salle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Entree" eSuperTypes="#//SalleElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="PricedElement" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -37,4 +38,5 @@
       eSuperTypes="#//PricedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Salle" eSuperTypes="#//SalleElement"/>
 </ecore:EPackage>

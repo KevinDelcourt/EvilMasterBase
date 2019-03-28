@@ -17,9 +17,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//Repere/entree"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilmasterbase.ecore#//Repere/localisation"/>
     </genClasses>
-    <genClasses ecoreClass="evilmasterbase.ecore#//Salle">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//Salle/sbire"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//Salle/piege"/>
+    <genClasses ecoreClass="evilmasterbase.ecore#//SalleElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//SalleElement/sbire"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//SalleElement/piege"/>
     </genClasses>
     <genClasses ecoreClass="evilmasterbase.ecore#//Sbire">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilmasterbase.ecore#//Sbire/arme"/>
@@ -37,5 +37,6 @@
     <genClasses ecoreClass="evilmasterbase.ecore#//DescribedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilmasterbase.ecore#//DescribedElement/description"/>
     </genClasses>
+    <genClasses ecoreClass="evilmasterbase.ecore#//Salle"/>
   </genPackages>
 </genmodel:GenModel>

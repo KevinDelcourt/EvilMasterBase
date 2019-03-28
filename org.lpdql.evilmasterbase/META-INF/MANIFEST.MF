@@ -1,7 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: org.lpdql.evilmasterbase
-Bundle-SymbolicName: org.lpdql.evilmasterbase; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.lpdql.evilmasterbase;singleton:=true
+Automatic-Module-Name: org.lpdql.evilmasterbase
 Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.lpdql.evilmasterbase,
+ org.lpdql.evilmasterbase.impl,
+ org.lpdql.evilmasterbase.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
