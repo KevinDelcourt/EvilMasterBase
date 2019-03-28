@@ -7,23 +7,25 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.lpdql.evilmasterbase.Bureau;
+
+import org.lpdql.evilmasterbase.Couloir;
 
 /**
- * This is the item provider adapter for a {@link org.lpdql.evilmasterbase.Bureau} object.
+ * This is the item provider adapter for a {@link org.lpdql.evilmasterbase.Couloir} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class BureauItemProvider extends SalleItemProvider {
+public class CouloirItemProvider extends SalleItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BureauItemProvider(AdapterFactory adapterFactory) {
+	public CouloirItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -43,14 +45,14 @@ public class BureauItemProvider extends SalleItemProvider {
 	}
 
 	/**
-	 * This returns Bureau.gif.
+	 * This returns Couloir.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Bureau"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Couloir"));
 	}
 
 	/**
@@ -71,9 +73,9 @@ public class BureauItemProvider extends SalleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Bureau) object).getNom();
-		return label == null || label.length() == 0 ? getString("_UI_Bureau_type")
-				: getString("_UI_Bureau_type") + " " + label;
+		String label = ((Couloir) object).getNom();
+		return label == null || label.length() == 0 ? getString("_UI_Couloir_type")
+				: getString("_UI_Couloir_type") + " " + label;
 	}
 
 	/**

@@ -55,7 +55,8 @@ public class PorteItemProvider extends ItemProviderAdapter implements IEditingDo
 
 			addNomPropertyDescriptor(object);
 			addPricePropertyDescriptor(object);
-			addSallePropertyDescriptor(object);
+			addSalle1PropertyDescriptor(object);
+			addSalle2PropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -93,17 +94,31 @@ public class PorteItemProvider extends ItemProviderAdapter implements IEditingDo
 	}
 
 	/**
-	 * This adds a property descriptor for the Salle feature.
+	 * This adds a property descriptor for the Salle1 feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSallePropertyDescriptor(Object object) {
+	protected void addSalle1PropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Porte_salle_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Porte_salle_feature", "_UI_Porte_type"),
-						EvilmasterbasePackage.Literals.PORTE__SALLE, true, false, true, null, null, null));
+						getResourceLocator(), getString("_UI_Porte_salle1_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Porte_salle1_feature", "_UI_Porte_type"),
+						EvilmasterbasePackage.Literals.PORTE__SALLE1, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Salle2 feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSalle2PropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Porte_salle2_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Porte_salle2_feature", "_UI_Porte_type"),
+						EvilmasterbasePackage.Literals.PORTE__SALLE2, true, false, true, null, null, null));
 	}
 
 	/**

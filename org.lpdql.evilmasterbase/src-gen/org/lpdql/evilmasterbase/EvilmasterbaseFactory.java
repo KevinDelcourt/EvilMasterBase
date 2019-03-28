@@ -40,13 +40,13 @@ public interface EvilmasterbaseFactory extends EFactory {
 	Salle createSalle();
 
 	/**
-	 * Returns a new object of class '<em>Sbire</em>'.
+	 * Returns a new object of class '<em>Escouade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sbire</em>'.
+	 * @return a new object of class '<em>Escouade</em>'.
 	 * @generated
 	 */
-	Sbire createSbire();
+	Escouade createEscouade();
 
 	/**
 	 * Returns a new object of class '<em>Bureau</em>'.
@@ -83,6 +83,15 @@ public interface EvilmasterbaseFactory extends EFactory {
 	 * @generated
 	 */
 	Entree createEntree();
+
+	/**
+	 * Returns a new object of class '<em>Couloir</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Couloir</em>'.
+	 * @generated
+	 */
+	Couloir createCouloir();
 
 	/**
 	 * Returns the package supported by this factory.

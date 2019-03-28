@@ -119,26 +119,26 @@ public class EvilmasterbaseItemProviderAdapterFactory extends EvilmasterbaseAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.lpdql.evilmasterbase.Sbire} instances.
+	 * This keeps track of the one adapter used for all {@link org.lpdql.evilmasterbase.Escouade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SbireItemProvider sbireItemProvider;
+	protected EscouadeItemProvider escouadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.lpdql.evilmasterbase.Sbire}.
+	 * This creates an adapter for a {@link org.lpdql.evilmasterbase.Escouade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSbireAdapter() {
-		if (sbireItemProvider == null) {
-			sbireItemProvider = new SbireItemProvider(this);
+	public Adapter createEscouadeAdapter() {
+		if (escouadeItemProvider == null) {
+			escouadeItemProvider = new EscouadeItemProvider(this);
 		}
 
-		return sbireItemProvider;
+		return escouadeItemProvider;
 	}
 
 	/**
@@ -231,6 +231,29 @@ public class EvilmasterbaseItemProviderAdapterFactory extends EvilmasterbaseAdap
 		}
 
 		return entreeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.lpdql.evilmasterbase.Couloir} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CouloirItemProvider couloirItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.lpdql.evilmasterbase.Couloir}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCouloirAdapter() {
+		if (couloirItemProvider == null) {
+			couloirItemProvider = new CouloirItemProvider(this);
+		}
+
+		return couloirItemProvider;
 	}
 
 	/**
@@ -336,8 +359,8 @@ public class EvilmasterbaseItemProviderAdapterFactory extends EvilmasterbaseAdap
 			repereItemProvider.dispose();
 		if (salleItemProvider != null)
 			salleItemProvider.dispose();
-		if (sbireItemProvider != null)
-			sbireItemProvider.dispose();
+		if (escouadeItemProvider != null)
+			escouadeItemProvider.dispose();
 		if (bureauItemProvider != null)
 			bureauItemProvider.dispose();
 		if (porteItemProvider != null)
@@ -346,6 +369,8 @@ public class EvilmasterbaseItemProviderAdapterFactory extends EvilmasterbaseAdap
 			piegeItemProvider.dispose();
 		if (entreeItemProvider != null)
 			entreeItemProvider.dispose();
+		if (couloirItemProvider != null)
+			couloirItemProvider.dispose();
 	}
 
 }

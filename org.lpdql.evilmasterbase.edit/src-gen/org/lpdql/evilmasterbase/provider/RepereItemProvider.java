@@ -140,10 +140,8 @@ public class RepereItemProvider extends ItemProviderAdapter implements IEditingD
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EvilmasterbasePackage.Literals.REPERE__SALLE);
-			childrenFeatures.add(EvilmasterbasePackage.Literals.REPERE__BUREAU);
 			childrenFeatures.add(EvilmasterbasePackage.Literals.REPERE__PORTE);
-			childrenFeatures.add(EvilmasterbasePackage.Literals.REPERE__ENTREE);
+			childrenFeatures.add(EvilmasterbasePackage.Literals.REPERE__SALLE);
 		}
 		return childrenFeatures;
 	}
@@ -213,10 +211,8 @@ public class RepereItemProvider extends ItemProviderAdapter implements IEditingD
 		case EvilmasterbasePackage.REPERE__LOCALISATION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case EvilmasterbasePackage.REPERE__SALLE:
-		case EvilmasterbasePackage.REPERE__BUREAU:
 		case EvilmasterbasePackage.REPERE__PORTE:
-		case EvilmasterbasePackage.REPERE__ENTREE:
+		case EvilmasterbasePackage.REPERE__SALLE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -234,6 +230,9 @@ public class RepereItemProvider extends ItemProviderAdapter implements IEditingD
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
+		newChildDescriptors.add(createChildParameter(EvilmasterbasePackage.Literals.REPERE__PORTE,
+				EvilmasterbaseFactory.eINSTANCE.createPorte()));
+
 		newChildDescriptors.add(createChildParameter(EvilmasterbasePackage.Literals.REPERE__SALLE,
 				EvilmasterbaseFactory.eINSTANCE.createSalle()));
 
@@ -243,36 +242,8 @@ public class RepereItemProvider extends ItemProviderAdapter implements IEditingD
 		newChildDescriptors.add(createChildParameter(EvilmasterbasePackage.Literals.REPERE__SALLE,
 				EvilmasterbaseFactory.eINSTANCE.createEntree()));
 
-		newChildDescriptors.add(createChildParameter(EvilmasterbasePackage.Literals.REPERE__BUREAU,
-				EvilmasterbaseFactory.eINSTANCE.createBureau()));
-
-		newChildDescriptors.add(createChildParameter(EvilmasterbasePackage.Literals.REPERE__PORTE,
-				EvilmasterbaseFactory.eINSTANCE.createPorte()));
-
-		newChildDescriptors.add(createChildParameter(EvilmasterbasePackage.Literals.REPERE__ENTREE,
-				EvilmasterbaseFactory.eINSTANCE.createEntree()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify = childFeature == EvilmasterbasePackage.Literals.REPERE__SALLE
-				|| childFeature == EvilmasterbasePackage.Literals.REPERE__BUREAU
-				|| childFeature == EvilmasterbasePackage.Literals.REPERE__ENTREE;
-
-		if (qualify) {
-			return getString("_UI_CreateChild_text2",
-					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
+		newChildDescriptors.add(createChildParameter(EvilmasterbasePackage.Literals.REPERE__SALLE,
+				EvilmasterbaseFactory.eINSTANCE.createCouloir()));
 	}
 
 	/**

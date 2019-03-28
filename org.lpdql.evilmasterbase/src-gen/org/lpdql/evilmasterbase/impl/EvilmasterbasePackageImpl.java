@@ -10,8 +10,10 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.lpdql.evilmasterbase.Bureau;
+import org.lpdql.evilmasterbase.Couloir;
 import org.lpdql.evilmasterbase.DescribedElement;
 import org.lpdql.evilmasterbase.Entree;
+import org.lpdql.evilmasterbase.Escouade;
 import org.lpdql.evilmasterbase.EvilmasterbaseFactory;
 import org.lpdql.evilmasterbase.EvilmasterbasePackage;
 import org.lpdql.evilmasterbase.Piege;
@@ -19,7 +21,6 @@ import org.lpdql.evilmasterbase.Porte;
 import org.lpdql.evilmasterbase.PricedElement;
 import org.lpdql.evilmasterbase.Repere;
 import org.lpdql.evilmasterbase.Salle;
-import org.lpdql.evilmasterbase.Sbire;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,7 +48,7 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass sbireEClass = null;
+	private EClass escouadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,6 +91,13 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 	 * @generated
 	 */
 	private EClass describedElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass couloirEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -170,24 +178,6 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 	 * @generated
 	 */
 	public EReference getRepere_Salle() {
-		return (EReference) repereEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRepere_Bureau() {
-		return (EReference) repereEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRepere_Porte() {
 		return (EReference) repereEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -196,8 +186,8 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRepere_Entree() {
-		return (EReference) repereEClass.getEStructuralFeatures().get(3);
+	public EReference getRepere_Porte() {
+		return (EReference) repereEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -206,7 +196,7 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 	 * @generated
 	 */
 	public EAttribute getRepere_Localisation() {
-		return (EAttribute) repereEClass.getEStructuralFeatures().get(4);
+		return (EAttribute) repereEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -241,8 +231,8 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSbire() {
-		return sbireEClass;
+	public EClass getEscouade() {
+		return escouadeEClass;
 	}
 
 	/**
@@ -250,8 +240,17 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSbire_Arme() {
-		return (EAttribute) sbireEClass.getEStructuralFeatures().get(0);
+	public EAttribute getEscouade_Arme() {
+		return (EAttribute) escouadeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEscouade_Nombre() {
+		return (EAttribute) escouadeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -277,8 +276,17 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPorte_Salle() {
+	public EReference getPorte_Salle1() {
 		return (EReference) porteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPorte_Salle2() {
+		return (EReference) porteEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -349,6 +357,15 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCouloir() {
+		return couloirEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EvilmasterbaseFactory getEvilmasterbaseFactory() {
 		return (EvilmasterbaseFactory) getEFactoryInstance();
 	}
@@ -374,23 +391,23 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 
 		// Create classes and their features
 		repereEClass = createEClass(REPERE);
-		createEReference(repereEClass, REPERE__SALLE);
-		createEReference(repereEClass, REPERE__BUREAU);
 		createEReference(repereEClass, REPERE__PORTE);
-		createEReference(repereEClass, REPERE__ENTREE);
 		createEAttribute(repereEClass, REPERE__LOCALISATION);
+		createEReference(repereEClass, REPERE__SALLE);
 
 		salleEClass = createEClass(SALLE);
 		createEReference(salleEClass, SALLE__SBIRE);
 		createEReference(salleEClass, SALLE__PIEGE);
 
-		sbireEClass = createEClass(SBIRE);
-		createEAttribute(sbireEClass, SBIRE__ARME);
+		escouadeEClass = createEClass(ESCOUADE);
+		createEAttribute(escouadeEClass, ESCOUADE__ARME);
+		createEAttribute(escouadeEClass, ESCOUADE__NOMBRE);
 
 		bureauEClass = createEClass(BUREAU);
 
 		porteEClass = createEClass(PORTE);
-		createEReference(porteEClass, PORTE__SALLE);
+		createEReference(porteEClass, PORTE__SALLE1);
+		createEReference(porteEClass, PORTE__SALLE2);
 
 		piegeEClass = createEClass(PIEGE);
 
@@ -402,6 +419,8 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 
 		describedElementEClass = createEClass(DESCRIBED_ELEMENT);
 		createEAttribute(describedElementEClass, DESCRIBED_ELEMENT__DESCRIPTION);
+
+		couloirEClass = createEClass(COULOIR);
 	}
 
 	/**
@@ -435,46 +454,47 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 		// Add supertypes to classes
 		repereEClass.getESuperTypes().add(this.getDescribedElement());
 		salleEClass.getESuperTypes().add(this.getDescribedElement());
-		sbireEClass.getESuperTypes().add(this.getPricedElement());
+		escouadeEClass.getESuperTypes().add(this.getPricedElement());
 		bureauEClass.getESuperTypes().add(this.getSalle());
 		porteEClass.getESuperTypes().add(this.getPricedElement());
 		piegeEClass.getESuperTypes().add(this.getPricedElement());
 		entreeEClass.getESuperTypes().add(this.getSalle());
 		describedElementEClass.getESuperTypes().add(this.getPricedElement());
+		couloirEClass.getESuperTypes().add(this.getSalle());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(repereEClass, Repere.class, "Repere", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRepere_Salle(), this.getSalle(), null, "salle", null, 0, -1, Repere.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getRepere_Bureau(), this.getBureau(), null, "bureau", null, 1, 1, Repere.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
 		initEReference(getRepere_Porte(), this.getPorte(), null, "porte", null, 0, -1, Repere.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getRepere_Entree(), this.getEntree(), null, "entree", null, 1, 1, Repere.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 		initEAttribute(getRepere_Localisation(), ecorePackage.getEString(), "localisation", null, 0, 1, Repere.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRepere_Salle(), this.getSalle(), null, "salle", null, 0, -1, Repere.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(salleEClass, Salle.class, "Salle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSalle_Sbire(), this.getSbire(), null, "sbire", null, 0, -1, Salle.class, !IS_TRANSIENT,
+		initEReference(getSalle_Sbire(), this.getEscouade(), null, "sbire", null, 0, -1, Salle.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 		initEReference(getSalle_Piege(), this.getPiege(), null, "piege", null, 0, -1, Salle.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
-		initEClass(sbireEClass, Sbire.class, "Sbire", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSbire_Arme(), ecorePackage.getEString(), "arme", null, 0, 1, Sbire.class, !IS_TRANSIENT,
+		initEClass(escouadeEClass, Escouade.class, "Escouade", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEscouade_Arme(), ecorePackage.getEString(), "arme", null, 0, 1, Escouade.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEscouade_Nombre(), ecorePackage.getEInt(), "nombre", null, 0, 1, Escouade.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bureauEClass, Bureau.class, "Bureau", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(porteEClass, Porte.class, "Porte", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPorte_Salle(), this.getSalle(), null, "salle", null, 2, 2, Porte.class, !IS_TRANSIENT,
+		initEReference(getPorte_Salle1(), this.getSalle(), null, "salle1", null, 1, 1, Porte.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getPorte_Salle2(), this.getSalle(), null, "salle2", null, 1, 1, Porte.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
@@ -494,6 +514,8 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 		initEAttribute(getDescribedElement_Description(), ecorePackage.getEString(), "description", null, 0, 1,
 				DescribedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(couloirEClass, Couloir.class, "Couloir", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

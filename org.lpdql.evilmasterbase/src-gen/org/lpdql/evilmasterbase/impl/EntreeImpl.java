@@ -3,7 +3,6 @@
 package org.lpdql.evilmasterbase.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.lpdql.evilmasterbase.Entree;
 import org.lpdql.evilmasterbase.EvilmasterbasePackage;
 

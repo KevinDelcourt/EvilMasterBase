@@ -3,33 +3,31 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="evilmasterbase" nsURI="http://www.lpdql.org/evilmasterbase"
     nsPrefix="evilmasterbase">
   <eClassifiers xsi:type="ecore:EClass" name="Repere" eSuperTypes="#//DescribedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="salle" upperBound="-1"
-        eType="#//Salle" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bureau" lowerBound="1"
-        eType="#//Bureau" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="porte" upperBound="-1"
         eType="#//Porte" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entree" lowerBound="1"
-        eType="#//Entree" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="localisation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="salle" upperBound="-1"
+        eType="#//Salle" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SalleElement" abstract="true" interface="true"
-      eSuperTypes="#//DescribedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Salle" eSuperTypes="#//DescribedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sbire" upperBound="-1"
-        eType="#//Sbire" containment="true"/>
+        eType="#//Escouade" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="piege" upperBound="-1"
         eType="#//Piege" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Sbire" eSuperTypes="#//PricedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Escouade" eSuperTypes="#//PricedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="arme" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Bureau" eSuperTypes="#//SalleElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Bureau" eSuperTypes="#//Salle"/>
   <eClassifiers xsi:type="ecore:EClass" name="Porte" eSuperTypes="#//PricedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="salle" lowerBound="2" upperBound="2"
-        eType="#//SalleElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="salle1" lowerBound="1"
+        eType="#//Salle"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="salle2" lowerBound="1"
+        eType="#//Salle"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Piege" eSuperTypes="#//PricedElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Entree" eSuperTypes="#//SalleElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Entree" eSuperTypes="#//Salle"/>
   <eClassifiers xsi:type="ecore:EClass" name="PricedElement" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -38,5 +36,5 @@
       eSuperTypes="#//PricedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Salle" eSuperTypes="#//SalleElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Couloir" eSuperTypes="#//Salle"/>
 </ecore:EPackage>

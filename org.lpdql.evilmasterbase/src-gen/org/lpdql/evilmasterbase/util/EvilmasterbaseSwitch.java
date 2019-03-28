@@ -88,11 +88,11 @@ public class EvilmasterbaseSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case EvilmasterbasePackage.SBIRE: {
-			Sbire sbire = (Sbire) theEObject;
-			T result = caseSbire(sbire);
+		case EvilmasterbasePackage.ESCOUADE: {
+			Escouade escouade = (Escouade) theEObject;
+			T result = caseEscouade(escouade);
 			if (result == null)
-				result = casePricedElement(sbire);
+				result = casePricedElement(escouade);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -157,6 +157,19 @@ public class EvilmasterbaseSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case EvilmasterbasePackage.COULOIR: {
+			Couloir couloir = (Couloir) theEObject;
+			T result = caseCouloir(couloir);
+			if (result == null)
+				result = caseSalle(couloir);
+			if (result == null)
+				result = caseDescribedElement(couloir);
+			if (result == null)
+				result = casePricedElement(couloir);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -193,17 +206,17 @@ public class EvilmasterbaseSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sbire</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Escouade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sbire</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Escouade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSbire(Sbire object) {
+	public T caseEscouade(Escouade object) {
 		return null;
 	}
 
@@ -294,6 +307,21 @@ public class EvilmasterbaseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDescribedElement(DescribedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Couloir</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Couloir</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCouloir(Couloir object) {
 		return null;
 	}
 

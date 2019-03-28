@@ -11,22 +11,22 @@
   <genPackages prefix="Evilmasterbase" basePackage="org.lpdql" disposableProviderFactory="true"
       ecorePackage="evilmasterbase.ecore#/">
     <genClasses ecoreClass="evilmasterbase.ecore#//Repere">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//Repere/salle"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//Repere/bureau"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//Repere/porte"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//Repere/entree"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilmasterbase.ecore#//Repere/localisation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//Repere/salle"/>
     </genClasses>
-    <genClasses ecoreClass="evilmasterbase.ecore#//SalleElement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//SalleElement/sbire"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//SalleElement/piege"/>
+    <genClasses ecoreClass="evilmasterbase.ecore#//Salle">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//Salle/sbire"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//Salle/piege"/>
     </genClasses>
-    <genClasses ecoreClass="evilmasterbase.ecore#//Sbire">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilmasterbase.ecore#//Sbire/arme"/>
+    <genClasses ecoreClass="evilmasterbase.ecore#//Escouade">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilmasterbase.ecore#//Escouade/arme"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilmasterbase.ecore#//Escouade/nombre"/>
     </genClasses>
     <genClasses ecoreClass="evilmasterbase.ecore#//Bureau"/>
     <genClasses ecoreClass="evilmasterbase.ecore#//Porte">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//Porte/salle"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//Porte/salle1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference evilmasterbase.ecore#//Porte/salle2"/>
     </genClasses>
     <genClasses ecoreClass="evilmasterbase.ecore#//Piege"/>
     <genClasses ecoreClass="evilmasterbase.ecore#//Entree"/>
@@ -37,6 +37,6 @@
     <genClasses ecoreClass="evilmasterbase.ecore#//DescribedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilmasterbase.ecore#//DescribedElement/description"/>
     </genClasses>
-    <genClasses ecoreClass="evilmasterbase.ecore#//Salle"/>
+    <genClasses ecoreClass="evilmasterbase.ecore#//Couloir"/>
   </genPackages>
 </genmodel:GenModel>

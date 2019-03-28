@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.lpdql.evilmasterbase.Escouade;
 import org.lpdql.evilmasterbase.EvilmasterbasePackage;
 import org.lpdql.evilmasterbase.Piege;
 import org.lpdql.evilmasterbase.Salle;
-import org.lpdql.evilmasterbase.Sbire;
 
 /**
  * <!-- begin-user-doc -->
@@ -109,7 +109,7 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Sbire> sbire;
+	protected EList<Escouade> sbire;
 
 	/**
 	 * The cached value of the '{@link #getPiege() <em>Piege</em>}' containment reference list.
@@ -209,9 +209,9 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Sbire> getSbire() {
+	public EList<Escouade> getSbire() {
 		if (sbire == null) {
-			sbire = new EObjectContainmentEList<Sbire>(Sbire.class, this, EvilmasterbasePackage.SALLE__SBIRE);
+			sbire = new EObjectContainmentEList<Escouade>(Escouade.class, this, EvilmasterbasePackage.SALLE__SBIRE);
 		}
 		return sbire;
 	}
@@ -286,7 +286,7 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 			return;
 		case EvilmasterbasePackage.SALLE__SBIRE:
 			getSbire().clear();
-			getSbire().addAll((Collection<? extends Sbire>) newValue);
+			getSbire().addAll((Collection<? extends Escouade>) newValue);
 			return;
 		case EvilmasterbasePackage.SALLE__PIEGE:
 			getPiege().clear();

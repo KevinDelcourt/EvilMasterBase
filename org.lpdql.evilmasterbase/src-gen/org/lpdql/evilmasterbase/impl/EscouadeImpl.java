@@ -3,32 +3,32 @@
 package org.lpdql.evilmasterbase.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.lpdql.evilmasterbase.Escouade;
 import org.lpdql.evilmasterbase.EvilmasterbasePackage;
-import org.lpdql.evilmasterbase.Porte;
-import org.lpdql.evilmasterbase.Salle;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Porte</b></em>'.
+ * An implementation of the model object '<em><b>Escouade</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.lpdql.evilmasterbase.impl.PorteImpl#getNom <em>Nom</em>}</li>
- *   <li>{@link org.lpdql.evilmasterbase.impl.PorteImpl#getPrice <em>Price</em>}</li>
- *   <li>{@link org.lpdql.evilmasterbase.impl.PorteImpl#getSalle1 <em>Salle1</em>}</li>
- *   <li>{@link org.lpdql.evilmasterbase.impl.PorteImpl#getSalle2 <em>Salle2</em>}</li>
+ *   <li>{@link org.lpdql.evilmasterbase.impl.EscouadeImpl#getNom <em>Nom</em>}</li>
+ *   <li>{@link org.lpdql.evilmasterbase.impl.EscouadeImpl#getPrice <em>Price</em>}</li>
+ *   <li>{@link org.lpdql.evilmasterbase.impl.EscouadeImpl#getArme <em>Arme</em>}</li>
+ *   <li>{@link org.lpdql.evilmasterbase.impl.EscouadeImpl#getNombre <em>Nombre</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
+public class EscouadeImpl extends MinimalEObjectImpl.Container implements Escouade {
 	/**
 	 * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -70,31 +70,51 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	protected int price = PRICE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSalle1() <em>Salle1</em>}' reference.
+	 * The default value of the '{@link #getArme() <em>Arme</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSalle1()
+	 * @see #getArme()
 	 * @generated
 	 * @ordered
 	 */
-	protected Salle salle1;
+	protected static final String ARME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getSalle2() <em>Salle2</em>}' reference.
+	 * The cached value of the '{@link #getArme() <em>Arme</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSalle2()
+	 * @see #getArme()
 	 * @generated
 	 * @ordered
 	 */
-	protected Salle salle2;
+	protected String arme = ARME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NOMBRE_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected int nombre = NOMBRE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PorteImpl() {
+	protected EscouadeImpl() {
 		super();
 	}
 
@@ -105,7 +125,7 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EvilmasterbasePackage.Literals.PORTE;
+		return EvilmasterbasePackage.Literals.ESCOUADE;
 	}
 
 	/**
@@ -126,7 +146,7 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 		String oldNom = nom;
 		nom = newNom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EvilmasterbasePackage.PORTE__NOM, oldNom, nom));
+			eNotify(new ENotificationImpl(this, Notification.SET, EvilmasterbasePackage.ESCOUADE__NOM, oldNom, nom));
 	}
 
 	/**
@@ -147,7 +167,8 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 		int oldPrice = price;
 		price = newPrice;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EvilmasterbasePackage.PORTE__PRICE, oldPrice, price));
+			eNotify(new ENotificationImpl(this, Notification.SET, EvilmasterbasePackage.ESCOUADE__PRICE, oldPrice,
+					price));
 	}
 
 	/**
@@ -155,17 +176,8 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Salle getSalle1() {
-		if (salle1 != null && salle1.eIsProxy()) {
-			InternalEObject oldSalle1 = (InternalEObject) salle1;
-			salle1 = (Salle) eResolveProxy(oldSalle1);
-			if (salle1 != oldSalle1) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EvilmasterbasePackage.PORTE__SALLE1,
-							oldSalle1, salle1));
-			}
-		}
-		return salle1;
+	public String getArme() {
+		return arme;
 	}
 
 	/**
@@ -173,21 +185,11 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Salle basicGetSalle1() {
-		return salle1;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSalle1(Salle newSalle1) {
-		Salle oldSalle1 = salle1;
-		salle1 = newSalle1;
+	public void setArme(String newArme) {
+		String oldArme = arme;
+		arme = newArme;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EvilmasterbasePackage.PORTE__SALLE1, oldSalle1,
-					salle1));
+			eNotify(new ENotificationImpl(this, Notification.SET, EvilmasterbasePackage.ESCOUADE__ARME, oldArme, arme));
 	}
 
 	/**
@@ -195,17 +197,8 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Salle getSalle2() {
-		if (salle2 != null && salle2.eIsProxy()) {
-			InternalEObject oldSalle2 = (InternalEObject) salle2;
-			salle2 = (Salle) eResolveProxy(oldSalle2);
-			if (salle2 != oldSalle2) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EvilmasterbasePackage.PORTE__SALLE2,
-							oldSalle2, salle2));
-			}
-		}
-		return salle2;
+	public int getNombre() {
+		return nombre;
 	}
 
 	/**
@@ -213,21 +206,12 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Salle basicGetSalle2() {
-		return salle2;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSalle2(Salle newSalle2) {
-		Salle oldSalle2 = salle2;
-		salle2 = newSalle2;
+	public void setNombre(int newNombre) {
+		int oldNombre = nombre;
+		nombre = newNombre;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EvilmasterbasePackage.PORTE__SALLE2, oldSalle2,
-					salle2));
+			eNotify(new ENotificationImpl(this, Notification.SET, EvilmasterbasePackage.ESCOUADE__NOMBRE, oldNombre,
+					nombre));
 	}
 
 	/**
@@ -238,18 +222,14 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case EvilmasterbasePackage.PORTE__NOM:
+		case EvilmasterbasePackage.ESCOUADE__NOM:
 			return getNom();
-		case EvilmasterbasePackage.PORTE__PRICE:
+		case EvilmasterbasePackage.ESCOUADE__PRICE:
 			return getPrice();
-		case EvilmasterbasePackage.PORTE__SALLE1:
-			if (resolve)
-				return getSalle1();
-			return basicGetSalle1();
-		case EvilmasterbasePackage.PORTE__SALLE2:
-			if (resolve)
-				return getSalle2();
-			return basicGetSalle2();
+		case EvilmasterbasePackage.ESCOUADE__ARME:
+			return getArme();
+		case EvilmasterbasePackage.ESCOUADE__NOMBRE:
+			return getNombre();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -259,21 +239,20 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case EvilmasterbasePackage.PORTE__NOM:
+		case EvilmasterbasePackage.ESCOUADE__NOM:
 			setNom((String) newValue);
 			return;
-		case EvilmasterbasePackage.PORTE__PRICE:
+		case EvilmasterbasePackage.ESCOUADE__PRICE:
 			setPrice((Integer) newValue);
 			return;
-		case EvilmasterbasePackage.PORTE__SALLE1:
-			setSalle1((Salle) newValue);
+		case EvilmasterbasePackage.ESCOUADE__ARME:
+			setArme((String) newValue);
 			return;
-		case EvilmasterbasePackage.PORTE__SALLE2:
-			setSalle2((Salle) newValue);
+		case EvilmasterbasePackage.ESCOUADE__NOMBRE:
+			setNombre((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -287,17 +266,17 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case EvilmasterbasePackage.PORTE__NOM:
+		case EvilmasterbasePackage.ESCOUADE__NOM:
 			setNom(NOM_EDEFAULT);
 			return;
-		case EvilmasterbasePackage.PORTE__PRICE:
+		case EvilmasterbasePackage.ESCOUADE__PRICE:
 			setPrice(PRICE_EDEFAULT);
 			return;
-		case EvilmasterbasePackage.PORTE__SALLE1:
-			setSalle1((Salle) null);
+		case EvilmasterbasePackage.ESCOUADE__ARME:
+			setArme(ARME_EDEFAULT);
 			return;
-		case EvilmasterbasePackage.PORTE__SALLE2:
-			setSalle2((Salle) null);
+		case EvilmasterbasePackage.ESCOUADE__NOMBRE:
+			setNombre(NOMBRE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -311,14 +290,14 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case EvilmasterbasePackage.PORTE__NOM:
+		case EvilmasterbasePackage.ESCOUADE__NOM:
 			return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
-		case EvilmasterbasePackage.PORTE__PRICE:
+		case EvilmasterbasePackage.ESCOUADE__PRICE:
 			return price != PRICE_EDEFAULT;
-		case EvilmasterbasePackage.PORTE__SALLE1:
-			return salle1 != null;
-		case EvilmasterbasePackage.PORTE__SALLE2:
-			return salle2 != null;
+		case EvilmasterbasePackage.ESCOUADE__ARME:
+			return ARME_EDEFAULT == null ? arme != null : !ARME_EDEFAULT.equals(arme);
+		case EvilmasterbasePackage.ESCOUADE__NOMBRE:
+			return nombre != NOMBRE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -338,8 +317,12 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 		result.append(nom);
 		result.append(", price: ");
 		result.append(price);
+		result.append(", arme: ");
+		result.append(arme);
+		result.append(", nombre: ");
+		result.append(nombre);
 		result.append(')');
 		return result.toString();
 	}
 
-} //PorteImpl
+} //EscouadeImpl

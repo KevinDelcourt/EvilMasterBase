@@ -13,11 +13,9 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.lpdql.evilmasterbase.Repere#getSalle <em>Salle</em>}</li>
- *   <li>{@link org.lpdql.evilmasterbase.Repere#getBureau <em>Bureau</em>}</li>
  *   <li>{@link org.lpdql.evilmasterbase.Repere#getPorte <em>Porte</em>}</li>
- *   <li>{@link org.lpdql.evilmasterbase.Repere#getEntree <em>Entree</em>}</li>
  *   <li>{@link org.lpdql.evilmasterbase.Repere#getLocalisation <em>Localisation</em>}</li>
+ *   <li>{@link org.lpdql.evilmasterbase.Repere#getSalle <em>Salle</em>}</li>
  * </ul>
  *
  * @see org.lpdql.evilmasterbase.EvilmasterbasePackage#getRepere()
@@ -42,32 +40,6 @@ public interface Repere extends DescribedElement {
 	EList<Salle> getSalle();
 
 	/**
-	 * Returns the value of the '<em><b>Bureau</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Bureau</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bureau</em>' containment reference.
-	 * @see #setBureau(Bureau)
-	 * @see org.lpdql.evilmasterbase.EvilmasterbasePackage#getRepere_Bureau()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	Bureau getBureau();
-
-	/**
-	 * Sets the value of the '{@link org.lpdql.evilmasterbase.Repere#getBureau <em>Bureau</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bureau</em>' containment reference.
-	 * @see #getBureau()
-	 * @generated
-	 */
-	void setBureau(Bureau value);
-
-	/**
 	 * Returns the value of the '<em><b>Porte</b></em>' containment reference list.
 	 * The list contents are of type {@link org.lpdql.evilmasterbase.Porte}.
 	 * <!-- begin-user-doc -->
@@ -82,32 +54,6 @@ public interface Repere extends DescribedElement {
 	 * @generated
 	 */
 	EList<Porte> getPorte();
-
-	/**
-	 * Returns the value of the '<em><b>Entree</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Entree</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Entree</em>' containment reference.
-	 * @see #setEntree(Entree)
-	 * @see org.lpdql.evilmasterbase.EvilmasterbasePackage#getRepere_Entree()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	Entree getEntree();
-
-	/**
-	 * Sets the value of the '{@link org.lpdql.evilmasterbase.Repere#getEntree <em>Entree</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Entree</em>' containment reference.
-	 * @see #getEntree()
-	 * @generated
-	 */
-	void setEntree(Entree value);
 
 	/**
 	 * Returns the value of the '<em><b>Localisation</b></em>' attribute.

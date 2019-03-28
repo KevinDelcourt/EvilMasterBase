@@ -77,8 +77,8 @@ public class EvilmasterbaseAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseSbire(Sbire object) {
-			return createSbireAdapter();
+		public Adapter caseEscouade(Escouade object) {
+			return createEscouadeAdapter();
 		}
 
 		@Override
@@ -109,6 +109,11 @@ public class EvilmasterbaseAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseDescribedElement(DescribedElement object) {
 			return createDescribedElementAdapter();
+		}
+
+		@Override
+		public Adapter caseCouloir(Couloir object) {
+			return createCouloirAdapter();
 		}
 
 		@Override
@@ -159,16 +164,16 @@ public class EvilmasterbaseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.lpdql.evilmasterbase.Sbire <em>Sbire</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.lpdql.evilmasterbase.Escouade <em>Escouade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.lpdql.evilmasterbase.Sbire
+	 * @see org.lpdql.evilmasterbase.Escouade
 	 * @generated
 	 */
-	public Adapter createSbireAdapter() {
+	public Adapter createEscouadeAdapter() {
 		return null;
 	}
 
@@ -253,6 +258,20 @@ public class EvilmasterbaseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDescribedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lpdql.evilmasterbase.Couloir <em>Couloir</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lpdql.evilmasterbase.Couloir
+	 * @generated
+	 */
+	public Adapter createCouloirAdapter() {
 		return null;
 	}
 

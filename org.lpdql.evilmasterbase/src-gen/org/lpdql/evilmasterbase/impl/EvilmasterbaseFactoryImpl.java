@@ -60,8 +60,8 @@ public class EvilmasterbaseFactoryImpl extends EFactoryImpl implements Evilmaste
 			return createRepere();
 		case EvilmasterbasePackage.SALLE:
 			return createSalle();
-		case EvilmasterbasePackage.SBIRE:
-			return createSbire();
+		case EvilmasterbasePackage.ESCOUADE:
+			return createEscouade();
 		case EvilmasterbasePackage.BUREAU:
 			return createBureau();
 		case EvilmasterbasePackage.PORTE:
@@ -70,6 +70,8 @@ public class EvilmasterbaseFactoryImpl extends EFactoryImpl implements Evilmaste
 			return createPiege();
 		case EvilmasterbasePackage.ENTREE:
 			return createEntree();
+		case EvilmasterbasePackage.COULOIR:
+			return createCouloir();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -100,9 +102,9 @@ public class EvilmasterbaseFactoryImpl extends EFactoryImpl implements Evilmaste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Sbire createSbire() {
-		SbireImpl sbire = new SbireImpl();
-		return sbire;
+	public Escouade createEscouade() {
+		EscouadeImpl escouade = new EscouadeImpl();
+		return escouade;
 	}
 
 	/**
@@ -143,6 +145,16 @@ public class EvilmasterbaseFactoryImpl extends EFactoryImpl implements Evilmaste
 	public Entree createEntree() {
 		EntreeImpl entree = new EntreeImpl();
 		return entree;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Couloir createCouloir() {
+		CouloirImpl couloir = new CouloirImpl();
+		return couloir;
 	}
 
 	/**

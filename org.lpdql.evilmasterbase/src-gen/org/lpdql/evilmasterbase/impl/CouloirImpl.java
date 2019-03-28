@@ -3,23 +3,24 @@
 package org.lpdql.evilmasterbase.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.lpdql.evilmasterbase.Bureau;
+
+import org.lpdql.evilmasterbase.Couloir;
 import org.lpdql.evilmasterbase.EvilmasterbasePackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Bureau</b></em>'.
+ * An implementation of the model object '<em><b>Couloir</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class BureauImpl extends SalleImpl implements Bureau {
+public class CouloirImpl extends SalleImpl implements Couloir {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BureauImpl() {
+	protected CouloirImpl() {
 		super();
 	}
 
@@ -30,7 +31,7 @@ public class BureauImpl extends SalleImpl implements Bureau {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EvilmasterbasePackage.Literals.BUREAU;
+		return EvilmasterbasePackage.Literals.COULOIR;
 	}
 
-} //BureauImpl
+} //CouloirImpl
