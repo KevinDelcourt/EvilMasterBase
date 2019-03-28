@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="graphicEditor" version="12.0.0.2017041100">
+  <ownedViewpoints name="MyViewpoint">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="D_Repere" label="Repere Diagram" domainClass="evilmasterbase::Repere">
+      <defaultLayer name="Default">
+        <edgeMappings name="E_Porte" label="Porte" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@containerMappings[name='C_Salle']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@containerMappings[name='C_Salle']" targetFinderExpression="feature:salle2" sourceFinderExpression="feature:salle1" domainClass="evilmasterbase::Porte" useDomainElement="true">
+          <style sourceArrow="InputFillClosedArrow" targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12" labelExpression="feature:name">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="C_Salle" label="Salle" domainClass="evilmasterbase::Salle" childrenPresentation="VerticalStack">
+          <subContainerMappings name="C_InfoSalle" label="Infos" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Salle" childrenPresentation="List">
+            <subNodeMappings name="N_SalleDescription" label="Description" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Salle">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Description: ' + self.description" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql: 'Prix: ' + self.price + 'k€'">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="C_Escouade" label="Escouade" semanticCandidatesExpression="feature:eAllContents" domainClass="evilmasterbase::Escouade" childrenPresentation="List">
+            <subNodeMappings name="N_EscouadePrice" label="Price" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Escouade">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Prix: ' + self.price + 'k€'" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="N_EscouadeNombre" label="Nombre" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Escouade">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: self.nombre + ' membres'" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="N_EscouadeArme" label="Arme" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Escouade">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Arme: ' + self.arme " labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="C_Piege" label="Piege" semanticCandidatesExpression="feature:eAllContents" domainClass="evilmasterbase::Piege" childrenPresentation="List">
+            <subNodeMappings name="N_PiegePrice" label="Price" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Piege">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Prix: ' + self.price + 'k€'" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="N_PiegeDangerosite" label="Dangerosite" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Piege">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Dangerosite: ' + self.dangerosite" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="N_PiegePosition" label="Position" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Piege">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Position: ' + self.position" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+          <conditionnalStyles predicateExpression="aql: self.name.contains(&quot;a&quot;)">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" backgroundStyle="GradientTopToBottom">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </conditionnalStyles>
+        </containerMappings>
+        <containerMappings name="C_Repere" label="Repere" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere" childrenPresentation="List">
+          <subNodeMappings name="N_ReperePrice" label="Price" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Prix de base: ' + self.price + 'k€'" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="N_RepereLocalisation" label="Localisation" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Emplacement: ' + self.localisation " labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="N_RepereDescription" label="Description" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Description: ' + self.description " labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="N_RepereTotalPrice" label="Total Price" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: self.eAllContents().price->sum()" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Salle_Tools" label="Nouvelle Salle">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="CC_Salle" label="New Salle" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@containerMappings[name='C_Salle']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="evilmasterbase::Salle" referenceName="salle">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Salle '+container.salle->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="price" valueExpression="20"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="description" valueExpression="Une tres belle salle"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="CC_Couloir" label="New Couloir" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@containerMappings[name='C_Salle']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="evilmasterbase::Couloir" referenceName="salle">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Couloir '+container.salle->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="price" valueExpression="10"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="description" valueExpression="Au long loin du long couloir"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="CC_Entree" label="New Entree" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@containerMappings[name='C_Salle']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="evilmasterbase::Entree" referenceName="salle">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Entree '+container.salle->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="price" valueExpression="60"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="description" valueExpression="Une belle entrée"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="CC_Bureau" label="New Bureau" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@containerMappings[name='C_Salle']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="evilmasterbase::Bureau" referenceName="salle">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Bureau '+container.salle->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="price" valueExpression="100"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="description" valueExpression="Un beau bureau"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="OtherTools" label="Autres">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="EC_Porte" label="New Porte" precondition="aql:preSource &lt;> preTarget" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@edgeMappings[name='E_Porte']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: source.eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="evilmasterbase::Porte" referenceName="porte">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="salle1" valueExpression="aql:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="salle2" valueExpression="aql:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="price" valueExpression="1"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql: 'Porte ' + source.eContainer().porte->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="CC_Escouade" label="New Escouade" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@containerMappings[name='C_Salle']/@subContainerMappings[name='C_Escouade']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="evilmasterbase::Escouade" referenceName="escouade">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql: 'Escouade '+container.eContainer().salle.escouade->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="price" valueExpression="50"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="nombre" valueExpression="10"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="arme" valueExpression="aql: 'Pas armés'"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="CC_Piege" label="New Piege" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@containerMappings[name='C_Salle']/@subContainerMappings[name='C_Piege']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="evilmasterbase::Piege" referenceName="piege">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql: 'Piege '+container.eContainer().salle.piege->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="price" valueExpression="30"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="dangerosite" valueExpression="50"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="position" valueExpression="aql: 'Dans ' + container.name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.lpdql.evilmasterbase.graphicEditor.Services"/>
+  </ownedViewpoints>
+</description:Group>
