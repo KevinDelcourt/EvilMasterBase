@@ -339,7 +339,7 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPricedElement_Nom() {
+	public EAttribute getPricedElement_Name() {
 		return (EAttribute) pricedElementEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -434,7 +434,7 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 		entreeEClass = createEClass(ENTREE);
 
 		pricedElementEClass = createEClass(PRICED_ELEMENT);
-		createEAttribute(pricedElementEClass, PRICED_ELEMENT__NOM);
+		createEAttribute(pricedElementEClass, PRICED_ELEMENT__NAME);
 		createEAttribute(pricedElementEClass, PRICED_ELEMENT__PRICE);
 
 		describedElementEClass = createEClass(DESCRIBED_ELEMENT);
@@ -528,7 +528,7 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 
 		initEClass(pricedElementEClass, PricedElement.class, "PricedElement", IS_ABSTRACT, IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPricedElement_Nom(), ecorePackage.getEString(), "nom", null, 0, 1, PricedElement.class,
+		initEAttribute(getPricedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, PricedElement.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPricedElement_Price(), ecorePackage.getEInt(), "price", null, 0, 1, PricedElement.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

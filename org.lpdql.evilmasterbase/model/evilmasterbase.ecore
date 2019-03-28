@@ -32,7 +32,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entree" eSuperTypes="#//Salle"/>
   <eClassifiers xsi:type="ecore:EClass" name="PricedElement" abstract="true" interface="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DescribedElement" abstract="true" interface="true"

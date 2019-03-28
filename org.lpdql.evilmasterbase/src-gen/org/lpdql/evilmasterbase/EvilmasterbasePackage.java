@@ -67,13 +67,13 @@ public interface EvilmasterbasePackage extends EPackage {
 	int PRICED_ELEMENT = 7;
 
 	/**
-	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRICED_ELEMENT__NOM = 0;
+	int PRICED_ELEMENT__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Price</b></em>' attribute.
@@ -113,13 +113,13 @@ public interface EvilmasterbasePackage extends EPackage {
 	int DESCRIBED_ELEMENT = 8;
 
 	/**
-	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DESCRIBED_ELEMENT__NOM = PRICED_ELEMENT__NOM;
+	int DESCRIBED_ELEMENT__NAME = PRICED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Price</b></em>' attribute.
@@ -168,13 +168,13 @@ public interface EvilmasterbasePackage extends EPackage {
 	int REPERE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REPERE__NOM = DESCRIBED_ELEMENT__NOM;
+	int REPERE__NAME = DESCRIBED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Price</b></em>' attribute.
@@ -250,13 +250,13 @@ public interface EvilmasterbasePackage extends EPackage {
 	int SALLE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SALLE__NOM = DESCRIBED_ELEMENT__NOM;
+	int SALLE__NAME = DESCRIBED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Price</b></em>' attribute.
@@ -323,13 +323,13 @@ public interface EvilmasterbasePackage extends EPackage {
 	int ESCOUADE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ESCOUADE__NOM = PRICED_ELEMENT__NOM;
+	int ESCOUADE__NAME = PRICED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Price</b></em>' attribute.
@@ -387,13 +387,13 @@ public interface EvilmasterbasePackage extends EPackage {
 	int BUREAU = 3;
 
 	/**
-	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUREAU__NOM = SALLE__NOM;
+	int BUREAU__NAME = SALLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Price</b></em>' attribute.
@@ -460,13 +460,13 @@ public interface EvilmasterbasePackage extends EPackage {
 	int PORTE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PORTE__NOM = PRICED_ELEMENT__NOM;
+	int PORTE__NAME = PRICED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Price</b></em>' attribute.
@@ -524,13 +524,13 @@ public interface EvilmasterbasePackage extends EPackage {
 	int PIEGE = 5;
 
 	/**
-	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIEGE__NOM = PRICED_ELEMENT__NOM;
+	int PIEGE__NAME = PRICED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Price</b></em>' attribute.
@@ -588,13 +588,13 @@ public interface EvilmasterbasePackage extends EPackage {
 	int ENTREE = 6;
 
 	/**
-	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTREE__NOM = SALLE__NOM;
+	int ENTREE__NAME = SALLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Price</b></em>' attribute.
@@ -661,13 +661,13 @@ public interface EvilmasterbasePackage extends EPackage {
 	int COULOIR = 9;
 
 	/**
-	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COULOIR__NOM = SALLE__NOM;
+	int COULOIR__NAME = SALLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Price</b></em>' attribute.
@@ -925,15 +925,15 @@ public interface EvilmasterbasePackage extends EPackage {
 	EClass getPricedElement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.lpdql.evilmasterbase.PricedElement#getNom <em>Nom</em>}'.
+	 * Returns the meta object for the attribute '{@link org.lpdql.evilmasterbase.PricedElement#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nom</em>'.
-	 * @see org.lpdql.evilmasterbase.PricedElement#getNom()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.lpdql.evilmasterbase.PricedElement#getName()
 	 * @see #getPricedElement()
 	 * @generated
 	 */
-	EAttribute getPricedElement_Nom();
+	EAttribute getPricedElement_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.lpdql.evilmasterbase.PricedElement#getPrice <em>Price</em>}'.
@@ -1169,12 +1169,12 @@ public interface EvilmasterbasePackage extends EPackage {
 		EClass PRICED_ELEMENT = eINSTANCE.getPricedElement();
 
 		/**
-		 * The meta object literal for the '<em><b>Nom</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PRICED_ELEMENT__NOM = eINSTANCE.getPricedElement_Nom();
+		EAttribute PRICED_ELEMENT__NAME = eINSTANCE.getPricedElement_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Price</b></em>' attribute feature.

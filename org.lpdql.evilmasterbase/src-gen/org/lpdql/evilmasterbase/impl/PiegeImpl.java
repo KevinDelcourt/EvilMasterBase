@@ -20,7 +20,7 @@ import org.lpdql.evilmasterbase.Piege;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.lpdql.evilmasterbase.impl.PiegeImpl#getNom <em>Nom</em>}</li>
+ *   <li>{@link org.lpdql.evilmasterbase.impl.PiegeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lpdql.evilmasterbase.impl.PiegeImpl#getPrice <em>Price</em>}</li>
  *   <li>{@link org.lpdql.evilmasterbase.impl.PiegeImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link org.lpdql.evilmasterbase.impl.PiegeImpl#getDangerosité <em>Dangerosité</em>}</li>
@@ -30,24 +30,24 @@ import org.lpdql.evilmasterbase.Piege;
  */
 public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 	/**
-	 * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNom()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOM_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNom() <em>Nom</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNom()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nom = NOM_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
@@ -133,8 +133,8 @@ public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNom() {
-		return nom;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -142,11 +142,11 @@ public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNom(String newNom) {
-		String oldNom = nom;
-		nom = newNom;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EvilmasterbasePackage.PIEGE__NOM, oldNom, nom));
+			eNotify(new ENotificationImpl(this, Notification.SET, EvilmasterbasePackage.PIEGE__NAME, oldName, name));
 	}
 
 	/**
@@ -222,8 +222,8 @@ public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case EvilmasterbasePackage.PIEGE__NOM:
-			return getNom();
+		case EvilmasterbasePackage.PIEGE__NAME:
+			return getName();
 		case EvilmasterbasePackage.PIEGE__PRICE:
 			return getPrice();
 		case EvilmasterbasePackage.PIEGE__POSITION:
@@ -242,8 +242,8 @@ public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case EvilmasterbasePackage.PIEGE__NOM:
-			setNom((String) newValue);
+		case EvilmasterbasePackage.PIEGE__NAME:
+			setName((String) newValue);
 			return;
 		case EvilmasterbasePackage.PIEGE__PRICE:
 			setPrice((Integer) newValue);
@@ -266,8 +266,8 @@ public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case EvilmasterbasePackage.PIEGE__NOM:
-			setNom(NOM_EDEFAULT);
+		case EvilmasterbasePackage.PIEGE__NAME:
+			setName(NAME_EDEFAULT);
 			return;
 		case EvilmasterbasePackage.PIEGE__PRICE:
 			setPrice(PRICE_EDEFAULT);
@@ -290,8 +290,8 @@ public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case EvilmasterbasePackage.PIEGE__NOM:
-			return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
+		case EvilmasterbasePackage.PIEGE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case EvilmasterbasePackage.PIEGE__PRICE:
 			return price != PRICE_EDEFAULT;
 		case EvilmasterbasePackage.PIEGE__POSITION:
@@ -313,8 +313,8 @@ public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (nom: ");
-		result.append(nom);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(", price: ");
 		result.append(price);
 		result.append(", position: ");

@@ -31,7 +31,7 @@ import org.lpdql.evilmasterbase.Salle;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.lpdql.evilmasterbase.impl.SalleImpl#getNom <em>Nom</em>}</li>
+ *   <li>{@link org.lpdql.evilmasterbase.impl.SalleImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lpdql.evilmasterbase.impl.SalleImpl#getPrice <em>Price</em>}</li>
  *   <li>{@link org.lpdql.evilmasterbase.impl.SalleImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.lpdql.evilmasterbase.impl.SalleImpl#getEscouade <em>Escouade</em>}</li>
@@ -42,24 +42,24 @@ import org.lpdql.evilmasterbase.Salle;
  */
 public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 	/**
-	 * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNom()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOM_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNom() <em>Nom</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNom()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nom = NOM_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
@@ -145,8 +145,8 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNom() {
-		return nom;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -154,11 +154,11 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNom(String newNom) {
-		String oldNom = nom;
-		nom = newNom;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EvilmasterbasePackage.SALLE__NOM, oldNom, nom));
+			eNotify(new ENotificationImpl(this, Notification.SET, EvilmasterbasePackage.SALLE__NAME, oldName, name));
 	}
 
 	/**
@@ -253,8 +253,8 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case EvilmasterbasePackage.SALLE__NOM:
-			return getNom();
+		case EvilmasterbasePackage.SALLE__NAME:
+			return getName();
 		case EvilmasterbasePackage.SALLE__PRICE:
 			return getPrice();
 		case EvilmasterbasePackage.SALLE__DESCRIPTION:
@@ -276,8 +276,8 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case EvilmasterbasePackage.SALLE__NOM:
-			setNom((String) newValue);
+		case EvilmasterbasePackage.SALLE__NAME:
+			setName((String) newValue);
 			return;
 		case EvilmasterbasePackage.SALLE__PRICE:
 			setPrice((Integer) newValue);
@@ -305,8 +305,8 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case EvilmasterbasePackage.SALLE__NOM:
-			setNom(NOM_EDEFAULT);
+		case EvilmasterbasePackage.SALLE__NAME:
+			setName(NAME_EDEFAULT);
 			return;
 		case EvilmasterbasePackage.SALLE__PRICE:
 			setPrice(PRICE_EDEFAULT);
@@ -332,8 +332,8 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case EvilmasterbasePackage.SALLE__NOM:
-			return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
+		case EvilmasterbasePackage.SALLE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case EvilmasterbasePackage.SALLE__PRICE:
 			return price != PRICE_EDEFAULT;
 		case EvilmasterbasePackage.SALLE__DESCRIPTION:
@@ -357,8 +357,8 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (nom: ");
-		result.append(nom);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(", price: ");
 		result.append(price);
 		result.append(", description: ");

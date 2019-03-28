@@ -34,7 +34,7 @@
     </genClasses>
     <genClasses ecoreClass="evilmasterbase.ecore#//Entree"/>
     <genClasses ecoreClass="evilmasterbase.ecore#//PricedElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilmasterbase.ecore#//PricedElement/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilmasterbase.ecore#//PricedElement/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilmasterbase.ecore#//PricedElement/price"/>
     </genClasses>
     <genClasses ecoreClass="evilmasterbase.ecore#//DescribedElement">

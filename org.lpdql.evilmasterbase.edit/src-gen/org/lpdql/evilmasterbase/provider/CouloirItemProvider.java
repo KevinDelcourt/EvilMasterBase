@@ -73,7 +73,7 @@ public class CouloirItemProvider extends SalleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Couloir) object).getNom();
+		String label = ((Couloir) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_Couloir_type")
 				: getString("_UI_Couloir_type") + " " + label;
 	}

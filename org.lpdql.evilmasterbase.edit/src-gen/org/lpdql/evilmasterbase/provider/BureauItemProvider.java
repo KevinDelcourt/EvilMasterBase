@@ -71,7 +71,7 @@ public class BureauItemProvider extends SalleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Bureau) object).getNom();
+		String label = ((Bureau) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_Bureau_type")
 				: getString("_UI_Bureau_type") + " " + label;
 	}

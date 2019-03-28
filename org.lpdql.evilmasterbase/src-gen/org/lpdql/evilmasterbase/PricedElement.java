@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.lpdql.evilmasterbase.PricedElement#getNom <em>Nom</em>}</li>
+ *   <li>{@link org.lpdql.evilmasterbase.PricedElement#getName <em>Name</em>}</li>
  *   <li>{@link org.lpdql.evilmasterbase.PricedElement#getPrice <em>Price</em>}</li>
  * </ul>
  *
@@ -23,30 +23,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface PricedElement extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Nom</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nom</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nom</em>' attribute.
-	 * @see #setNom(String)
-	 * @see org.lpdql.evilmasterbase.EvilmasterbasePackage#getPricedElement_Nom()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see org.lpdql.evilmasterbase.EvilmasterbasePackage#getPricedElement_Name()
 	 * @model
 	 * @generated
 	 */
-	String getNom();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.lpdql.evilmasterbase.PricedElement#getNom <em>Nom</em>}' attribute.
+	 * Sets the value of the '{@link org.lpdql.evilmasterbase.PricedElement#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nom</em>' attribute.
-	 * @see #getNom()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setNom(String value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Price</b></em>' attribute.

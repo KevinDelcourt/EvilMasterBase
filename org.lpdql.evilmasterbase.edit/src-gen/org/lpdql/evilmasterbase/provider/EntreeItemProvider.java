@@ -71,7 +71,7 @@ public class EntreeItemProvider extends SalleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Entree) object).getNom();
+		String label = ((Entree) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_Entree_type")
 				: getString("_UI_Entree_type") + " " + label;
 	}

@@ -567,9 +567,9 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.0/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_-fyKYFBvEemslOypgar0MQ" name="nom : EString" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="evilmasterbase.ecore#//PricedElement/nom"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="evilmasterbase.ecore#//PricedElement/nom"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_-fyKYFBvEemslOypgar0MQ" name="name : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="evilmasterbase.ecore#//PricedElement/name"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="evilmasterbase.ecore#//PricedElement/name"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_BDA8IVBwEemslOypgar0MQ" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>

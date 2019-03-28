@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            objectClass="org.eclipse.core.resources.IFile"
+            nameFilter="*.evilmasterbase"
+            id="org.lpdql.evilmasterbase.htmlGenerator.ui.popupMenus.contribution.IFile">
+         <menu id="org.eclipse.acceleo.module.menu" label="Acceleo Model to Text" path="additionsAcceleo">
+               <groupMarker name="acceleo"/> 
+         </menu>
+         <action
+               class="org.lpdql.evilmasterbase.htmlGenerator.ui.popupMenus.AcceleoGenerateHtmlGeneratorAction"
+               enablesFor="+"
+               id="org.lpdql.evilmasterbase.htmlGenerator.ui.popupMenus.acceleoGenerateHtmlGeneratorAction"
+               icon="icons/default.gif"
+               label="Generate HtmlGenerator"
+               menubarPath="org.eclipse.acceleo.module.menu/acceleo"/>
+      </objectContribution>
+   </extension>
+</plugin>
