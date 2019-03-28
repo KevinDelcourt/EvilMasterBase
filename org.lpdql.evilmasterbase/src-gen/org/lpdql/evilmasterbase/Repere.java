@@ -24,22 +24,6 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Repere extends DescribedElement {
 	/**
-	 * Returns the value of the '<em><b>Salle</b></em>' containment reference list.
-	 * The list contents are of type {@link org.lpdql.evilmasterbase.Salle}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Salle</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Salle</em>' containment reference list.
-	 * @see org.lpdql.evilmasterbase.EvilmasterbasePackage#getRepere_Salle()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Salle> getSalle();
-
-	/**
 	 * Returns the value of the '<em><b>Porte</b></em>' containment reference list.
 	 * The list contents are of type {@link org.lpdql.evilmasterbase.Porte}.
 	 * <!-- begin-user-doc -->
@@ -80,5 +64,21 @@ public interface Repere extends DescribedElement {
 	 * @generated
 	 */
 	void setLocalisation(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Salle</b></em>' containment reference list.
+	 * The list contents are of type {@link org.lpdql.evilmasterbase.Salle}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Salle</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Salle</em>' containment reference list.
+	 * @see org.lpdql.evilmasterbase.EvilmasterbasePackage#getRepere_Salle()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Salle> getSalle();
 
 } // Repere

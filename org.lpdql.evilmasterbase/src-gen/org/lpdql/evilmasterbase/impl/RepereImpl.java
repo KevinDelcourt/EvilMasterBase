@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.lpdql.evilmasterbase.EvilmasterbasePackage;
 import org.lpdql.evilmasterbase.Porte;
 import org.lpdql.evilmasterbase.Repere;
@@ -230,18 +231,6 @@ public class RepereImpl extends MinimalEObjectImpl.Container implements Repere {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Salle> getSalle() {
-		if (salle == null) {
-			salle = new EObjectContainmentEList<Salle>(Salle.class, this, EvilmasterbasePackage.REPERE__SALLE);
-		}
-		return salle;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Porte> getPorte() {
 		if (porte == null) {
 			porte = new EObjectContainmentEList<Porte>(Porte.class, this, EvilmasterbasePackage.REPERE__PORTE);
@@ -269,6 +258,18 @@ public class RepereImpl extends MinimalEObjectImpl.Container implements Repere {
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EvilmasterbasePackage.REPERE__LOCALISATION,
 					oldLocalisation, localisation));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Salle> getSalle() {
+		if (salle == null) {
+			salle = new EObjectContainmentEList<Salle>(Salle.class, this, EvilmasterbasePackage.REPERE__SALLE);
+		}
+		return salle;
 	}
 
 	/**

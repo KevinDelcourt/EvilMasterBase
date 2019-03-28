@@ -22,7 +22,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface Salle extends DescribedElement {
-
 	/**
 	 * Returns the value of the '<em><b>Sbire</b></em>' containment reference list.
 	 * The list contents are of type {@link org.lpdql.evilmasterbase.Escouade}.

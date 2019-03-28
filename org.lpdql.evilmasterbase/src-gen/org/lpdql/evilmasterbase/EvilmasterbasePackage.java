@@ -250,56 +250,6 @@ public interface EvilmasterbasePackage extends EPackage {
 	int SALLE = 1;
 
 	/**
-	 * The meta object id for the '{@link org.lpdql.evilmasterbase.impl.BureauImpl <em>Bureau</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lpdql.evilmasterbase.impl.BureauImpl
-	 * @see org.lpdql.evilmasterbase.impl.EvilmasterbasePackageImpl#getBureau()
-	 * @generated
-	 */
-	int BUREAU = 3;
-
-	/**
-	 * The meta object id for the '{@link org.lpdql.evilmasterbase.impl.PorteImpl <em>Porte</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lpdql.evilmasterbase.impl.PorteImpl
-	 * @see org.lpdql.evilmasterbase.impl.EvilmasterbasePackageImpl#getPorte()
-	 * @generated
-	 */
-	int PORTE = 4;
-
-	/**
-	 * The meta object id for the '{@link org.lpdql.evilmasterbase.impl.PiegeImpl <em>Piege</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lpdql.evilmasterbase.impl.PiegeImpl
-	 * @see org.lpdql.evilmasterbase.impl.EvilmasterbasePackageImpl#getPiege()
-	 * @generated
-	 */
-	int PIEGE = 5;
-
-	/**
-	 * The meta object id for the '{@link org.lpdql.evilmasterbase.impl.EntreeImpl <em>Entree</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lpdql.evilmasterbase.impl.EntreeImpl
-	 * @see org.lpdql.evilmasterbase.impl.EvilmasterbasePackageImpl#getEntree()
-	 * @generated
-	 */
-	int ENTREE = 6;
-
-	/**
-	 * The meta object id for the '{@link org.lpdql.evilmasterbase.impl.CouloirImpl <em>Couloir</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lpdql.evilmasterbase.impl.CouloirImpl
-	 * @see org.lpdql.evilmasterbase.impl.EvilmasterbasePackageImpl#getCouloir()
-	 * @generated
-	 */
-	int COULOIR = 9;
-
-	/**
 	 * The feature id for the '<em><b>Nom</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -427,6 +377,16 @@ public interface EvilmasterbasePackage extends EPackage {
 	int ESCOUADE_OPERATION_COUNT = PRICED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.lpdql.evilmasterbase.impl.BureauImpl <em>Bureau</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lpdql.evilmasterbase.impl.BureauImpl
+	 * @see org.lpdql.evilmasterbase.impl.EvilmasterbasePackageImpl#getBureau()
+	 * @generated
+	 */
+	int BUREAU = 3;
+
+	/**
 	 * The feature id for the '<em><b>Nom</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -490,6 +450,16 @@ public interface EvilmasterbasePackage extends EPackage {
 	int BUREAU_OPERATION_COUNT = SALLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.lpdql.evilmasterbase.impl.PorteImpl <em>Porte</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lpdql.evilmasterbase.impl.PorteImpl
+	 * @see org.lpdql.evilmasterbase.impl.EvilmasterbasePackageImpl#getPorte()
+	 * @generated
+	 */
+	int PORTE = 4;
+
+	/**
 	 * The feature id for the '<em><b>Nom</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -544,6 +514,16 @@ public interface EvilmasterbasePackage extends EPackage {
 	int PORTE_OPERATION_COUNT = PRICED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.lpdql.evilmasterbase.impl.PiegeImpl <em>Piege</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lpdql.evilmasterbase.impl.PiegeImpl
+	 * @see org.lpdql.evilmasterbase.impl.EvilmasterbasePackageImpl#getPiege()
+	 * @generated
+	 */
+	int PIEGE = 5;
+
+	/**
 	 * The feature id for the '<em><b>Nom</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -578,6 +558,16 @@ public interface EvilmasterbasePackage extends EPackage {
 	 * @ordered
 	 */
 	int PIEGE_OPERATION_COUNT = PRICED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.lpdql.evilmasterbase.impl.EntreeImpl <em>Entree</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lpdql.evilmasterbase.impl.EntreeImpl
+	 * @see org.lpdql.evilmasterbase.impl.EvilmasterbasePackageImpl#getEntree()
+	 * @generated
+	 */
+	int ENTREE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Nom</b></em>' attribute.
@@ -641,6 +631,16 @@ public interface EvilmasterbasePackage extends EPackage {
 	 * @ordered
 	 */
 	int ENTREE_OPERATION_COUNT = SALLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.lpdql.evilmasterbase.impl.CouloirImpl <em>Couloir</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lpdql.evilmasterbase.impl.CouloirImpl
+	 * @see org.lpdql.evilmasterbase.impl.EvilmasterbasePackageImpl#getCouloir()
+	 * @generated
+	 */
+	int COULOIR = 9;
 
 	/**
 	 * The feature id for the '<em><b>Nom</b></em>' attribute.
@@ -716,17 +716,6 @@ public interface EvilmasterbasePackage extends EPackage {
 	EClass getRepere();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.lpdql.evilmasterbase.Repere#getSalle <em>Salle</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Salle</em>'.
-	 * @see org.lpdql.evilmasterbase.Repere#getSalle()
-	 * @see #getRepere()
-	 * @generated
-	 */
-	EReference getRepere_Salle();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link org.lpdql.evilmasterbase.Repere#getPorte <em>Porte</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -747,6 +736,17 @@ public interface EvilmasterbasePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRepere_Localisation();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.lpdql.evilmasterbase.Repere#getSalle <em>Salle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Salle</em>'.
+	 * @see org.lpdql.evilmasterbase.Repere#getSalle()
+	 * @see #getRepere()
+	 * @generated
+	 */
+	EReference getRepere_Salle();
 
 	/**
 	 * Returns the meta object for class '{@link org.lpdql.evilmasterbase.Salle <em>Salle</em>}'.
@@ -971,14 +971,6 @@ public interface EvilmasterbasePackage extends EPackage {
 		EClass REPERE = eINSTANCE.getRepere();
 
 		/**
-		 * The meta object literal for the '<em><b>Salle</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REPERE__SALLE = eINSTANCE.getRepere_Salle();
-
-		/**
 		 * The meta object literal for the '<em><b>Porte</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -993,6 +985,14 @@ public interface EvilmasterbasePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute REPERE__LOCALISATION = eINSTANCE.getRepere_Localisation();
+
+		/**
+		 * The meta object literal for the '<em><b>Salle</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REPERE__SALLE = eINSTANCE.getRepere_Salle();
 
 		/**
 		 * The meta object literal for the '{@link org.lpdql.evilmasterbase.impl.SalleImpl <em>Salle</em>}' class.

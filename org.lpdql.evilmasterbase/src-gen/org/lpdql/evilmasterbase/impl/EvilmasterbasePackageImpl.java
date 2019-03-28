@@ -177,15 +177,6 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRepere_Salle() {
-		return (EReference) repereEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getRepere_Porte() {
 		return (EReference) repereEClass.getEStructuralFeatures().get(0);
 	}
@@ -197,6 +188,15 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 	 */
 	public EAttribute getRepere_Localisation() {
 		return (EAttribute) repereEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRepere_Salle() {
+		return (EReference) repereEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
