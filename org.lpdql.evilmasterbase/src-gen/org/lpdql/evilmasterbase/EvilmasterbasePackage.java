@@ -551,13 +551,13 @@ public interface EvilmasterbasePackage extends EPackage {
 	int PIEGE__POSITION = PRICED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Dangerosité</b></em>' attribute.
+	 * The feature id for the '<em><b>Dangerosite</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIEGE__DANGEROSITÉ = PRICED_ELEMENT_FEATURE_COUNT + 1;
+	int PIEGE__DANGEROSITE = PRICED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Piege</em>' class.
@@ -894,15 +894,15 @@ public interface EvilmasterbasePackage extends EPackage {
 	EAttribute getPiege_Position();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.lpdql.evilmasterbase.Piege#getDangerosité <em>Dangerosité</em>}'.
+	 * Returns the meta object for the attribute '{@link org.lpdql.evilmasterbase.Piege#getDangerosite <em>Dangerosite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Dangerosité</em>'.
-	 * @see org.lpdql.evilmasterbase.Piege#getDangerosité()
+	 * @return the meta object for the attribute '<em>Dangerosite</em>'.
+	 * @see org.lpdql.evilmasterbase.Piege#getDangerosite()
 	 * @see #getPiege()
 	 * @generated
 	 */
-	EAttribute getPiege_Dangerosité();
+	EAttribute getPiege_Dangerosite();
 
 	/**
 	 * Returns the meta object for class '{@link org.lpdql.evilmasterbase.Entree <em>Entree</em>}'.
@@ -1141,12 +1141,12 @@ public interface EvilmasterbasePackage extends EPackage {
 		EAttribute PIEGE__POSITION = eINSTANCE.getPiege_Position();
 
 		/**
-		 * The meta object literal for the '<em><b>Dangerosité</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Dangerosite</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PIEGE__DANGEROSITÉ = eINSTANCE.getPiege_Dangerosité();
+		EAttribute PIEGE__DANGEROSITE = eINSTANCE.getPiege_Dangerosite();
 
 		/**
 		 * The meta object literal for the '{@link org.lpdql.evilmasterbase.impl.EntreeImpl <em>Entree</em>}' class.

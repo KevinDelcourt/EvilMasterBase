@@ -1,0 +1,25 @@
+[comment encoding = UTF-8 /]
+[module bonDeCommande('http://www.lpdql.org/evilmasterbase')]
+
+
+[**
+ * Génère le bon de commande du repère
+ * @param aRepere repère maléfique
+ */]
+[template public generateBonDeCommande(aRepere : Repere)]
+[comment @main/]
+[file (aRepere.name + '.html', false, 'UTF-8')]
+<html>
+	<body>
+		<h1>[aRepere.name/]</h1>
+		<h5>Emplacement: [aRepere.localisation/]</h5>
+		<h5>Description: [aRepere.description/]</h5>
+		<h5>Prix de base: [aRepere.price/]$</h5>
+
+		[for(s: Salle | aRepere.salle)]
+				<h5>[s.name/]</h5>
+		[/for]
+	</body>
+</html>
+[/file]
+[/template]

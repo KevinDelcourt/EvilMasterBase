@@ -499,9 +499,9 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_EBal4FE_EemEbOuW8gX_gQ" name="dangerosité : EInt" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="evilmasterbase.ecore#//Piege/dangerosité"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="evilmasterbase.ecore#//Piege/dangerosité"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_EBal4FE_EemEbOuW8gX_gQ" name="dangerosite : EInt" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="evilmasterbase.ecore#//Piege/dangerosite"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="evilmasterbase.ecore#//Piege/dangerosite"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_GVdsIVE_EemEbOuW8gX_gQ" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>

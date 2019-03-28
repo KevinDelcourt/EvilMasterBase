@@ -30,7 +30,7 @@
     </genClasses>
     <genClasses ecoreClass="evilmasterbase.ecore#//Piege">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilmasterbase.ecore#//Piege/position"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilmasterbase.ecore#//Piege/dangerosité"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilmasterbase.ecore#//Piege/dangerosite"/>
     </genClasses>
     <genClasses ecoreClass="evilmasterbase.ecore#//Entree"/>
     <genClasses ecoreClass="evilmasterbase.ecore#//PricedElement">

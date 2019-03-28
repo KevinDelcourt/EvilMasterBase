@@ -12,7 +12,7 @@ package org.lpdql.evilmasterbase;
  * </p>
  * <ul>
  *   <li>{@link org.lpdql.evilmasterbase.Piege#getPosition <em>Position</em>}</li>
- *   <li>{@link org.lpdql.evilmasterbase.Piege#getDangerosité <em>Dangerosité</em>}</li>
+ *   <li>{@link org.lpdql.evilmasterbase.Piege#getDangerosite <em>Dangerosite</em>}</li>
  * </ul>
  *
  * @see org.lpdql.evilmasterbase.EvilmasterbasePackage#getPiege()
@@ -48,28 +48,28 @@ public interface Piege extends PricedElement {
 	void setPosition(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Dangerosité</b></em>' attribute.
+	 * Returns the value of the '<em><b>Dangerosite</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Dangerosité</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Dangerosite</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dangerosité</em>' attribute.
-	 * @see #setDangerosité(int)
-	 * @see org.lpdql.evilmasterbase.EvilmasterbasePackage#getPiege_Dangerosité()
+	 * @return the value of the '<em>Dangerosite</em>' attribute.
+	 * @see #setDangerosite(int)
+	 * @see org.lpdql.evilmasterbase.EvilmasterbasePackage#getPiege_Dangerosite()
 	 * @model
 	 * @generated
 	 */
-	int getDangerosité();
+	int getDangerosite();
 
 	/**
-	 * Sets the value of the '{@link org.lpdql.evilmasterbase.Piege#getDangerosité <em>Dangerosité</em>}' attribute.
+	 * Sets the value of the '{@link org.lpdql.evilmasterbase.Piege#getDangerosite <em>Dangerosite</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dangerosité</em>' attribute.
-	 * @see #getDangerosité()
+	 * @param value the new value of the '<em>Dangerosite</em>' attribute.
+	 * @see #getDangerosite()
 	 * @generated
 	 */
-	void setDangerosité(int value);
+	void setDangerosite(int value);
 } // Piege

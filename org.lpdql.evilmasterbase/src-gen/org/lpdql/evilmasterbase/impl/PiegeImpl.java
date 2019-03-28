@@ -23,7 +23,7 @@ import org.lpdql.evilmasterbase.Piege;
  *   <li>{@link org.lpdql.evilmasterbase.impl.PiegeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lpdql.evilmasterbase.impl.PiegeImpl#getPrice <em>Price</em>}</li>
  *   <li>{@link org.lpdql.evilmasterbase.impl.PiegeImpl#getPosition <em>Position</em>}</li>
- *   <li>{@link org.lpdql.evilmasterbase.impl.PiegeImpl#getDangerosité <em>Dangerosité</em>}</li>
+ *   <li>{@link org.lpdql.evilmasterbase.impl.PiegeImpl#getDangerosite <em>Dangerosite</em>}</li>
  * </ul>
  *
  * @generated
@@ -90,24 +90,24 @@ public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 	protected String position = POSITION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDangerosité() <em>Dangerosité</em>}' attribute.
+	 * The default value of the '{@link #getDangerosite() <em>Dangerosite</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDangerosité()
+	 * @see #getDangerosite()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int DANGEROSITÉ_EDEFAULT = 0;
+	protected static final int DANGEROSITE_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getDangerosité() <em>Dangerosité</em>}' attribute.
+	 * The cached value of the '{@link #getDangerosite() <em>Dangerosite</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDangerosité()
+	 * @see #getDangerosite()
 	 * @generated
 	 * @ordered
 	 */
-	protected int dangerosité = DANGEROSITÉ_EDEFAULT;
+	protected int dangerosite = DANGEROSITE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -197,8 +197,8 @@ public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getDangerosité() {
-		return dangerosité;
+	public int getDangerosite() {
+		return dangerosite;
 	}
 
 	/**
@@ -206,12 +206,12 @@ public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDangerosité(int newDangerosité) {
-		int oldDangerosité = dangerosité;
-		dangerosité = newDangerosité;
+	public void setDangerosite(int newDangerosite) {
+		int oldDangerosite = dangerosite;
+		dangerosite = newDangerosite;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EvilmasterbasePackage.PIEGE__DANGEROSITÉ,
-					oldDangerosité, dangerosité));
+			eNotify(new ENotificationImpl(this, Notification.SET, EvilmasterbasePackage.PIEGE__DANGEROSITE,
+					oldDangerosite, dangerosite));
 	}
 
 	/**
@@ -228,8 +228,8 @@ public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 			return getPrice();
 		case EvilmasterbasePackage.PIEGE__POSITION:
 			return getPosition();
-		case EvilmasterbasePackage.PIEGE__DANGEROSITÉ:
-			return getDangerosité();
+		case EvilmasterbasePackage.PIEGE__DANGEROSITE:
+			return getDangerosite();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -251,8 +251,8 @@ public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 		case EvilmasterbasePackage.PIEGE__POSITION:
 			setPosition((String) newValue);
 			return;
-		case EvilmasterbasePackage.PIEGE__DANGEROSITÉ:
-			setDangerosité((Integer) newValue);
+		case EvilmasterbasePackage.PIEGE__DANGEROSITE:
+			setDangerosite((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -275,8 +275,8 @@ public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 		case EvilmasterbasePackage.PIEGE__POSITION:
 			setPosition(POSITION_EDEFAULT);
 			return;
-		case EvilmasterbasePackage.PIEGE__DANGEROSITÉ:
-			setDangerosité(DANGEROSITÉ_EDEFAULT);
+		case EvilmasterbasePackage.PIEGE__DANGEROSITE:
+			setDangerosite(DANGEROSITE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -296,8 +296,8 @@ public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 			return price != PRICE_EDEFAULT;
 		case EvilmasterbasePackage.PIEGE__POSITION:
 			return POSITION_EDEFAULT == null ? position != null : !POSITION_EDEFAULT.equals(position);
-		case EvilmasterbasePackage.PIEGE__DANGEROSITÉ:
-			return dangerosité != DANGEROSITÉ_EDEFAULT;
+		case EvilmasterbasePackage.PIEGE__DANGEROSITE:
+			return dangerosite != DANGEROSITE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -319,8 +319,8 @@ public class PiegeImpl extends MinimalEObjectImpl.Container implements Piege {
 		result.append(price);
 		result.append(", position: ");
 		result.append(position);
-		result.append(", dangerosité: ");
-		result.append(dangerosité);
+		result.append(", dangerosite: ");
+		result.append(dangerosite);
 		result.append(')');
 		return result.toString();
 	}

@@ -312,7 +312,7 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPiege_Dangerosité() {
+	public EAttribute getPiege_Dangerosite() {
 		return (EAttribute) piegeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -429,7 +429,7 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 
 		piegeEClass = createEClass(PIEGE);
 		createEAttribute(piegeEClass, PIEGE__POSITION);
-		createEAttribute(piegeEClass, PIEGE__DANGEROSITÉ);
+		createEAttribute(piegeEClass, PIEGE__DANGEROSITE);
 
 		entreeEClass = createEClass(ENTREE);
 
@@ -521,7 +521,7 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 		initEClass(piegeEClass, Piege.class, "Piege", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPiege_Position(), ecorePackage.getEString(), "position", null, 0, 1, Piege.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPiege_Dangerosité(), ecorePackage.getEInt(), "dangerosité", null, 0, 1, Piege.class,
+		initEAttribute(getPiege_Dangerosite(), ecorePackage.getEInt(), "dangerosite", null, 0, 1, Piege.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entreeEClass, Entree.class, "Entree", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

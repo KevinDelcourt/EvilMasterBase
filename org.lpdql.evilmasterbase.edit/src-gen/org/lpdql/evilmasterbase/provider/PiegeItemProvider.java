@@ -56,7 +56,7 @@ public class PiegeItemProvider extends ItemProviderAdapter implements IEditingDo
 			addNamePropertyDescriptor(object);
 			addPricePropertyDescriptor(object);
 			addPositionPropertyDescriptor(object);
-			addDangerositéPropertyDescriptor(object);
+			addDangerositePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -109,18 +109,18 @@ public class PiegeItemProvider extends ItemProviderAdapter implements IEditingDo
 	}
 
 	/**
-	 * This adds a property descriptor for the Dangerosité feature.
+	 * This adds a property descriptor for the Dangerosite feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDangerositéPropertyDescriptor(Object object) {
+	protected void addDangerositePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Piege_dangerosité_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Piege_dangerosité_feature",
+						getResourceLocator(), getString("_UI_Piege_dangerosite_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Piege_dangerosite_feature",
 								"_UI_Piege_type"),
-						EvilmasterbasePackage.Literals.PIEGE__DANGEROSITÉ, true, false, false,
+						EvilmasterbasePackage.Literals.PIEGE__DANGEROSITE, true, false, false,
 						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
@@ -173,7 +173,7 @@ public class PiegeItemProvider extends ItemProviderAdapter implements IEditingDo
 		case EvilmasterbasePackage.PIEGE__NAME:
 		case EvilmasterbasePackage.PIEGE__PRICE:
 		case EvilmasterbasePackage.PIEGE__POSITION:
-		case EvilmasterbasePackage.PIEGE__DANGEROSITÉ:
+		case EvilmasterbasePackage.PIEGE__DANGEROSITE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
