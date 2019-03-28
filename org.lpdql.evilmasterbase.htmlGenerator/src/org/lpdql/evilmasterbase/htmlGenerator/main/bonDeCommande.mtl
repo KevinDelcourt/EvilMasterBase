@@ -13,114 +13,138 @@
 <html>
 	<head>
 		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		  <title>Bon de commande - [aRepere.name/]</title>
 		  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		  <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet"> 
+		<style>
+
+		  	h1{font-family: 'Germania One'}
+		  </style>
 	</head>
 	<body>
-		<h1>Bon de commande</h1>
-
-		<table class="table">
-			<tbody>
-				<tr>
-					<td>Nom</td>
-					<td>[aRepere.name/]</td>
-				</tr>
-				<tr>
-					<td>Emplacement</td>
-					<td>[aRepere.localisation/]</td>
-				</tr>
-				<tr>
-					<td>Description</td>
-					<td>[aRepere.description/]</td>
-				</tr>
-				<tr>
-					<td>Dangerosité</td>
-					<td>[aRepere.salle.piege.dangerosite->sum()/]</td>
-				</tr>
-			</tbody>
-			<tbody>
-				<tr>
-					<th>Article</th>
-					<th>Quantité</th>
-				</tr>
-				<tr>
-					<td>Salles</td>
-					<td>[aRepere.salle->size()/]</td>
-				</tr>
-				<tr>
-					<td>Portes</td>
-					<td>[aRepere.porte->size()/]</td>
-				</tr>
-				<tr>
-					<td>Pièges</td>
-					<td>[aRepere.salle.piege->size()/]</td>
-				</tr>
-				<tr>
-					<td>Escouades</td>
-					<td>[aRepere.salle.escouade->size()/]</td>
-				</tr>
-			</tbody>
-		</table>
-		<table class="table">
-			<tbody>
-				<tr>
-					<th>Article</th>
-					<th>Nom</th>
-					<th>Description</th>
-					<th>Prix</th>
-				</tr>
-				<tr>
-					<th>Starter pack</th>
-					<td colspan="2"><i>Comprends l'emplacement et les pots de vins aux autorités</i></td>
-					<td>[aRepere.price/]</td>
-				</tr>
-				[for(s: Salle | aRepere.salle)]
-				<tr>
-					<th>[s.eClass().name /]</th>
-					<td>[s.name /]</td>
-					<td>[s.description /]</td>
-					<td>[s.price /]</td>
-				</tr>
-					[for(p: Piege | s.piege)]
-					<tr>
-						<th>Piège</th>
-						<td>[p.name /]</td>
-						<td>Dangerosité de [p.dangerosite/] placé [p.position/]</td>
-						<td>[p.price /]</td>
-					</tr>
-					[/for]
-					[for(e: Escouade | s.escouade)]
-					<tr>
-						<th>Escouade</th>
-						<td>[e.name /]</td>
-						<td>[e.nombre/] membres armés de [e.arme/]</td>
-						<td>[e.price /]</td>
-					</tr>
-					[/for]
-					[for(p: Porte | aRepere.porte->select(p:Porte | p.salle1 = s))]
-					<tr>
-						<th>Porte</th>
-						<td>[p.name /]</td>
-						<td>Placée entre [p.salle1.name/] et [p.salle2.name/]</td>
-						<td>[p.price /]</td>
-					</tr>
-					[/for]
-				[/for]
-				<tr>
-					<th>Total</th>
-					<td colspan="2"></td>
-					<th>
-						[aRepere.price 
-							+ aRepere.salle.price->sum() 
-							+ aRepere.porte.price->sum() 
-							+ aRepere.salle.piege.price->sum() 
-							+ aRepere.salle.escouade.price->sum()
-						/]
-					</th>
-				</tr>
-			</tbody>
-		</table>
+		<div class="jumbotron">
+			<h1 class="display-4">[aRepere.name/]</h1>
+			<p class="lead">Bon de commande</p>
+		</div>
+		<div class="container">
+			
+			<div class="row mt-4">
+				<div class="col-md-2"></div>
+				<table class="table table-striped table-hover col-md-8">
+					<thead class="thead-light">
+						<tr>
+							<th colspan="2">Résumé de la commande</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Nom du repère</td>
+							<td>[aRepere.name/]</td>
+						</tr>
+						<tr>
+							<td>Emplacement</td>
+							<td>[aRepere.localisation/]</td>
+						</tr>
+						<tr>
+							<td>Description</td>
+							<td>[aRepere.description/]</td>
+						</tr>
+						<tr>
+							<td>Dangerosité</td>
+							<td>[aRepere.salle.piege.dangerosite->sum()/]</td>
+						</tr>
+					</tbody>
+					<thead class="thead-light">
+						<tr>
+							<th>Article</th>
+							<th>Quantité</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Salles</td>
+							<td>[aRepere.salle->size()/]</td>
+						</tr>
+						<tr>
+							<td>Portes</td>
+							<td>[aRepere.porte->size()/]</td>
+						</tr>
+						<tr>
+							<td>Pièges</td>
+							<td>[aRepere.salle.piege->size()/]</td>
+						</tr>
+						<tr>
+							<td>Escouades</td>
+							<td>[aRepere.salle.escouade->size()/]</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		
+			<table class="table table-striped table-hover">
+				<thead class="thead-light">
+					<tr>
+						<th>Article</th>
+						<th>Nom</th>
+						<th>Description</th>
+						<th>Prix (€)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Starter pack</td>
+						<td colspan="2"><i>Comprends l'emplacement et les pots de vins aux autorités</i></td>
+						<td>[aRepere.price/]</td>
+					</tr>
+					[for(s: Salle | aRepere.salle)]
+					<tr>
+						<td>[s.eClass().name /]</td>
+						<td>[s.name /]</td>
+						<td>[s.description /]</td>
+						<td>[s.price /]</td>
+					</tr>
+						[for(p: Piege | s.piege)]
+						<tr>
+							<td>Piège</td>
+							<td>[p.name /]</td>
+							<td>Dangerosité de [p.dangerosite/] placé [p.position/]</td>
+							<td>[p.price /]</td>
+						</tr>
+						[/for]
+						[for(e: Escouade | s.escouade)]
+						<tr>
+							<td>Escouade</td>
+							<td>[e.name /]</td>
+							<td>[e.nombre/] membres armés de [e.arme/]</td>
+							<td>[e.price /]</td>
+						</tr>
+						[/for]
+						[for(p: Porte | aRepere.porte->select(p:Porte | p.salle1 = s))]
+						<tr>
+							<td>Porte</td>
+							<td>[p.name /]</td>
+							<td>Placée entre [p.salle1.name/] et [p.salle2.name/]</td>
+							<td>[p.price /]</td>
+						</tr>
+						[/for]
+					[/for]
+				</tbody>
+				<tfoot>
+		            <tr>
+		                <th colspan="3">Total</th>
+		                <th>
+							[aRepere.price 
+								+ aRepere.salle.price->sum() 
+								+ aRepere.porte.price->sum() 
+								+ aRepere.salle.piege.price->sum() 
+								+ aRepere.salle.escouade.price->sum()
+							/]
+						</th>
+		            </tr>
+		        </tfoot>
+			</table>
+		</div>
 	</body>
 </html>
 [/file]
