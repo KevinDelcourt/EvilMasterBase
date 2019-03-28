@@ -123,7 +123,7 @@ public class SalleItemProvider extends ItemProviderAdapter implements IEditingDo
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EvilmasterbasePackage.Literals.SALLE__SBIRE);
+			childrenFeatures.add(EvilmasterbasePackage.Literals.SALLE__ESCOUADE);
 			childrenFeatures.add(EvilmasterbasePackage.Literals.SALLE__PIEGE);
 		}
 		return childrenFeatures;
@@ -193,7 +193,7 @@ public class SalleItemProvider extends ItemProviderAdapter implements IEditingDo
 		case EvilmasterbasePackage.SALLE__DESCRIPTION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case EvilmasterbasePackage.SALLE__SBIRE:
+		case EvilmasterbasePackage.SALLE__ESCOUADE:
 		case EvilmasterbasePackage.SALLE__PIEGE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
@@ -212,7 +212,7 @@ public class SalleItemProvider extends ItemProviderAdapter implements IEditingDo
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(EvilmasterbasePackage.Literals.SALLE__SBIRE,
+		newChildDescriptors.add(createChildParameter(EvilmasterbasePackage.Literals.SALLE__ESCOUADE,
 				EvilmasterbaseFactory.eINSTANCE.createEscouade()));
 
 		newChildDescriptors.add(createChildParameter(EvilmasterbasePackage.Literals.SALLE__PIEGE,

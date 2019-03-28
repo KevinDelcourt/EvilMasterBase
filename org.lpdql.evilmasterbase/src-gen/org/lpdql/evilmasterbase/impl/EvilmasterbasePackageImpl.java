@@ -213,7 +213,7 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSalle_Sbire() {
+	public EReference getSalle_Escouade() {
 		return (EReference) salleEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -296,6 +296,24 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 	 */
 	public EClass getPiege() {
 		return piegeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPiege_Position() {
+		return (EAttribute) piegeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPiege_Dangerosité() {
+		return (EAttribute) piegeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -396,7 +414,7 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 		createEReference(repereEClass, REPERE__SALLE);
 
 		salleEClass = createEClass(SALLE);
-		createEReference(salleEClass, SALLE__SBIRE);
+		createEReference(salleEClass, SALLE__ESCOUADE);
 		createEReference(salleEClass, SALLE__PIEGE);
 
 		escouadeEClass = createEClass(ESCOUADE);
@@ -410,6 +428,8 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 		createEReference(porteEClass, PORTE__SALLE2);
 
 		piegeEClass = createEClass(PIEGE);
+		createEAttribute(piegeEClass, PIEGE__POSITION);
+		createEAttribute(piegeEClass, PIEGE__DANGEROSITÉ);
 
 		entreeEClass = createEClass(ENTREE);
 
@@ -474,9 +494,9 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 				IS_ORDERED);
 
 		initEClass(salleEClass, Salle.class, "Salle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSalle_Sbire(), this.getEscouade(), null, "sbire", null, 0, -1, Salle.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
+		initEReference(getSalle_Escouade(), this.getEscouade(), null, "escouade", null, 0, -1, Salle.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSalle_Piege(), this.getPiege(), null, "piege", null, 0, -1, Salle.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
@@ -499,6 +519,10 @@ public class EvilmasterbasePackageImpl extends EPackageImpl implements Evilmaste
 				IS_ORDERED);
 
 		initEClass(piegeEClass, Piege.class, "Piege", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPiege_Position(), ecorePackage.getEString(), "position", null, 0, 1, Piege.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPiege_Dangerosité(), ecorePackage.getEInt(), "dangerosité", null, 0, 1, Piege.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entreeEClass, Entree.class, "Entree", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

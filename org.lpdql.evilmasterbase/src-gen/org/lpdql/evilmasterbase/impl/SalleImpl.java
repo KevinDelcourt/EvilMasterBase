@@ -34,7 +34,7 @@ import org.lpdql.evilmasterbase.Salle;
  *   <li>{@link org.lpdql.evilmasterbase.impl.SalleImpl#getNom <em>Nom</em>}</li>
  *   <li>{@link org.lpdql.evilmasterbase.impl.SalleImpl#getPrice <em>Price</em>}</li>
  *   <li>{@link org.lpdql.evilmasterbase.impl.SalleImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.lpdql.evilmasterbase.impl.SalleImpl#getSbire <em>Sbire</em>}</li>
+ *   <li>{@link org.lpdql.evilmasterbase.impl.SalleImpl#getEscouade <em>Escouade</em>}</li>
  *   <li>{@link org.lpdql.evilmasterbase.impl.SalleImpl#getPiege <em>Piege</em>}</li>
  * </ul>
  *
@@ -102,14 +102,14 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSbire() <em>Sbire</em>}' containment reference list.
+	 * The cached value of the '{@link #getEscouade() <em>Escouade</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSbire()
+	 * @see #getEscouade()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Escouade> sbire;
+	protected EList<Escouade> escouade;
 
 	/**
 	 * The cached value of the '{@link #getPiege() <em>Piege</em>}' containment reference list.
@@ -209,11 +209,12 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Escouade> getSbire() {
-		if (sbire == null) {
-			sbire = new EObjectContainmentEList<Escouade>(Escouade.class, this, EvilmasterbasePackage.SALLE__SBIRE);
+	public EList<Escouade> getEscouade() {
+		if (escouade == null) {
+			escouade = new EObjectContainmentEList<Escouade>(Escouade.class, this,
+					EvilmasterbasePackage.SALLE__ESCOUADE);
 		}
-		return sbire;
+		return escouade;
 	}
 
 	/**
@@ -236,8 +237,8 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case EvilmasterbasePackage.SALLE__SBIRE:
-			return ((InternalEList<?>) getSbire()).basicRemove(otherEnd, msgs);
+		case EvilmasterbasePackage.SALLE__ESCOUADE:
+			return ((InternalEList<?>) getEscouade()).basicRemove(otherEnd, msgs);
 		case EvilmasterbasePackage.SALLE__PIEGE:
 			return ((InternalEList<?>) getPiege()).basicRemove(otherEnd, msgs);
 		}
@@ -258,8 +259,8 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 			return getPrice();
 		case EvilmasterbasePackage.SALLE__DESCRIPTION:
 			return getDescription();
-		case EvilmasterbasePackage.SALLE__SBIRE:
-			return getSbire();
+		case EvilmasterbasePackage.SALLE__ESCOUADE:
+			return getEscouade();
 		case EvilmasterbasePackage.SALLE__PIEGE:
 			return getPiege();
 		}
@@ -284,9 +285,9 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 		case EvilmasterbasePackage.SALLE__DESCRIPTION:
 			setDescription((String) newValue);
 			return;
-		case EvilmasterbasePackage.SALLE__SBIRE:
-			getSbire().clear();
-			getSbire().addAll((Collection<? extends Escouade>) newValue);
+		case EvilmasterbasePackage.SALLE__ESCOUADE:
+			getEscouade().clear();
+			getEscouade().addAll((Collection<? extends Escouade>) newValue);
 			return;
 		case EvilmasterbasePackage.SALLE__PIEGE:
 			getPiege().clear();
@@ -313,8 +314,8 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 		case EvilmasterbasePackage.SALLE__DESCRIPTION:
 			setDescription(DESCRIPTION_EDEFAULT);
 			return;
-		case EvilmasterbasePackage.SALLE__SBIRE:
-			getSbire().clear();
+		case EvilmasterbasePackage.SALLE__ESCOUADE:
+			getEscouade().clear();
 			return;
 		case EvilmasterbasePackage.SALLE__PIEGE:
 			getPiege().clear();
@@ -337,8 +338,8 @@ public class SalleImpl extends MinimalEObjectImpl.Container implements Salle {
 			return price != PRICE_EDEFAULT;
 		case EvilmasterbasePackage.SALLE__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		case EvilmasterbasePackage.SALLE__SBIRE:
-			return sbire != null && !sbire.isEmpty();
+		case EvilmasterbasePackage.SALLE__ESCOUADE:
+			return escouade != null && !escouade.isEmpty();
 		case EvilmasterbasePackage.SALLE__PIEGE:
 			return piege != null && !piege.isEmpty();
 		}

@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.lpdql.evilmasterbase.Salle#getSbire <em>Sbire</em>}</li>
+ *   <li>{@link org.lpdql.evilmasterbase.Salle#getEscouade <em>Escouade</em>}</li>
  *   <li>{@link org.lpdql.evilmasterbase.Salle#getPiege <em>Piege</em>}</li>
  * </ul>
  *
@@ -23,20 +23,20 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Salle extends DescribedElement {
 	/**
-	 * Returns the value of the '<em><b>Sbire</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Escouade</b></em>' containment reference list.
 	 * The list contents are of type {@link org.lpdql.evilmasterbase.Escouade}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sbire</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Escouade</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sbire</em>' containment reference list.
-	 * @see org.lpdql.evilmasterbase.EvilmasterbasePackage#getSalle_Sbire()
+	 * @return the value of the '<em>Escouade</em>' containment reference list.
+	 * @see org.lpdql.evilmasterbase.EvilmasterbasePackage#getSalle_Escouade()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Escouade> getSbire();
+	EList<Escouade> getEscouade();
 
 	/**
 	 * Returns the value of the '<em><b>Piege</b></em>' containment reference list.

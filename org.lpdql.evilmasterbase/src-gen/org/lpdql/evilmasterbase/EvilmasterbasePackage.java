@@ -277,13 +277,13 @@ public interface EvilmasterbasePackage extends EPackage {
 	int SALLE__DESCRIPTION = DESCRIBED_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Sbire</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Escouade</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SALLE__SBIRE = DESCRIBED_ELEMENT_FEATURE_COUNT + 0;
+	int SALLE__ESCOUADE = DESCRIBED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Piege</b></em>' containment reference list.
@@ -414,13 +414,13 @@ public interface EvilmasterbasePackage extends EPackage {
 	int BUREAU__DESCRIPTION = SALLE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Sbire</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Escouade</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUREAU__SBIRE = SALLE__SBIRE;
+	int BUREAU__ESCOUADE = SALLE__ESCOUADE;
 
 	/**
 	 * The feature id for the '<em><b>Piege</b></em>' containment reference list.
@@ -542,13 +542,31 @@ public interface EvilmasterbasePackage extends EPackage {
 	int PIEGE__PRICE = PRICED_ELEMENT__PRICE;
 
 	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIEGE__POSITION = PRICED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Dangerosité</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIEGE__DANGEROSITÉ = PRICED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Piege</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIEGE_FEATURE_COUNT = PRICED_ELEMENT_FEATURE_COUNT + 0;
+	int PIEGE_FEATURE_COUNT = PRICED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Piege</em>' class.
@@ -597,13 +615,13 @@ public interface EvilmasterbasePackage extends EPackage {
 	int ENTREE__DESCRIPTION = SALLE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Sbire</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Escouade</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTREE__SBIRE = SALLE__SBIRE;
+	int ENTREE__ESCOUADE = SALLE__ESCOUADE;
 
 	/**
 	 * The feature id for the '<em><b>Piege</b></em>' containment reference list.
@@ -670,13 +688,13 @@ public interface EvilmasterbasePackage extends EPackage {
 	int COULOIR__DESCRIPTION = SALLE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Sbire</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Escouade</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COULOIR__SBIRE = SALLE__SBIRE;
+	int COULOIR__ESCOUADE = SALLE__ESCOUADE;
 
 	/**
 	 * The feature id for the '<em><b>Piege</b></em>' containment reference list.
@@ -759,15 +777,15 @@ public interface EvilmasterbasePackage extends EPackage {
 	EClass getSalle();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.lpdql.evilmasterbase.Salle#getSbire <em>Sbire</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.lpdql.evilmasterbase.Salle#getEscouade <em>Escouade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sbire</em>'.
-	 * @see org.lpdql.evilmasterbase.Salle#getSbire()
+	 * @return the meta object for the containment reference list '<em>Escouade</em>'.
+	 * @see org.lpdql.evilmasterbase.Salle#getEscouade()
 	 * @see #getSalle()
 	 * @generated
 	 */
-	EReference getSalle_Sbire();
+	EReference getSalle_Escouade();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.lpdql.evilmasterbase.Salle#getPiege <em>Piege</em>}'.
@@ -863,6 +881,28 @@ public interface EvilmasterbasePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPiege();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lpdql.evilmasterbase.Piege#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Position</em>'.
+	 * @see org.lpdql.evilmasterbase.Piege#getPosition()
+	 * @see #getPiege()
+	 * @generated
+	 */
+	EAttribute getPiege_Position();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lpdql.evilmasterbase.Piege#getDangerosité <em>Dangerosité</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Dangerosité</em>'.
+	 * @see org.lpdql.evilmasterbase.Piege#getDangerosité()
+	 * @see #getPiege()
+	 * @generated
+	 */
+	EAttribute getPiege_Dangerosité();
 
 	/**
 	 * Returns the meta object for class '{@link org.lpdql.evilmasterbase.Entree <em>Entree</em>}'.
@@ -1005,12 +1045,12 @@ public interface EvilmasterbasePackage extends EPackage {
 		EClass SALLE = eINSTANCE.getSalle();
 
 		/**
-		 * The meta object literal for the '<em><b>Sbire</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Escouade</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SALLE__SBIRE = eINSTANCE.getSalle_Sbire();
+		EReference SALLE__ESCOUADE = eINSTANCE.getSalle_Escouade();
 
 		/**
 		 * The meta object literal for the '<em><b>Piege</b></em>' containment reference list feature.
@@ -1091,6 +1131,22 @@ public interface EvilmasterbasePackage extends EPackage {
 		 * @generated
 		 */
 		EClass PIEGE = eINSTANCE.getPiege();
+
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PIEGE__POSITION = eINSTANCE.getPiege_Position();
+
+		/**
+		 * The meta object literal for the '<em><b>Dangerosité</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PIEGE__DANGEROSITÉ = eINSTANCE.getPiege_Dangerosité();
 
 		/**
 		 * The meta object literal for the '{@link org.lpdql.evilmasterbase.impl.EntreeImpl <em>Entree</em>}' class.

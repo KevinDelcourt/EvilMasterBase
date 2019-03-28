@@ -55,6 +55,8 @@ public class PiegeItemProvider extends ItemProviderAdapter implements IEditingDo
 
 			addNomPropertyDescriptor(object);
 			addPricePropertyDescriptor(object);
+			addPositionPropertyDescriptor(object);
+			addDangerositéPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -88,6 +90,37 @@ public class PiegeItemProvider extends ItemProviderAdapter implements IEditingDo
 						getString("_UI_PropertyDescriptor_description", "_UI_PricedElement_price_feature",
 								"_UI_PricedElement_type"),
 						EvilmasterbasePackage.Literals.PRICED_ELEMENT__PRICE, true, false, false,
+						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Position feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPositionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Piege_position_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Piege_position_feature", "_UI_Piege_type"),
+						EvilmasterbasePackage.Literals.PIEGE__POSITION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Dangerosité feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDangerositéPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Piege_dangerosité_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Piege_dangerosité_feature",
+								"_UI_Piege_type"),
+						EvilmasterbasePackage.Literals.PIEGE__DANGEROSITÉ, true, false, false,
 						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
@@ -139,6 +172,8 @@ public class PiegeItemProvider extends ItemProviderAdapter implements IEditingDo
 		switch (notification.getFeatureID(Piege.class)) {
 		case EvilmasterbasePackage.PIEGE__NOM:
 		case EvilmasterbasePackage.PIEGE__PRICE:
+		case EvilmasterbasePackage.PIEGE__POSITION:
+		case EvilmasterbasePackage.PIEGE__DANGEROSITÉ:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

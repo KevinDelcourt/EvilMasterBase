@@ -10,7 +10,7 @@
         eType="#//Salle" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Salle" eSuperTypes="#//DescribedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sbire" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="escouade" upperBound="-1"
         eType="#//Escouade" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="piege" upperBound="-1"
         eType="#//Piege" containment="true"/>
@@ -26,7 +26,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="salle2" lowerBound="1"
         eType="#//Salle"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Piege" eSuperTypes="#//PricedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Piege" eSuperTypes="#//PricedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dangerosité" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entree" eSuperTypes="#//Salle"/>
   <eClassifiers xsi:type="ecore:EClass" name="PricedElement" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
