@@ -3,133 +3,231 @@
   <ownedViewpoints name="MyViewpoint">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="D_Repere" label="Repere Diagram" domainClass="evilmasterbase::Repere">
       <defaultLayer name="Default">
-        <edgeMappings name="E_Porte" label="Porte" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@containerMappings[name='C_Salle']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@containerMappings[name='C_Salle']" targetFinderExpression="feature:salle2" sourceFinderExpression="feature:salle1" domainClass="evilmasterbase::Porte" useDomainElement="true">
-          <style sourceArrow="InputFillClosedArrow" targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
+        <edgeMappings name="E_Porte" label="Porte" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_Name']" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@containerMappings[name='C_Salle']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@containerMappings[name='C_Salle']" targetFinderExpression="feature:salle2" sourceFinderExpression="feature:salle1" domainClass="evilmasterbase::Porte" useDomainElement="true">
+          <style sourceArrow="InputFillClosedArrow" targetArrow="InputFillClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12" labelExpression="feature:name">
+            <beginLabelStyleDescription labelSize="16" showIcon="false" labelExpression="aql: 'Prix (k€): ' + self.price">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <centerLabelStyleDescription labelSize="16" showIcon="false" labelExpression="feature:name">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="C_Salle" label="Salle" domainClass="evilmasterbase::Salle" childrenPresentation="VerticalStack">
-          <subContainerMappings name="C_InfoSalle" label="Infos" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Salle" childrenPresentation="List">
-            <subNodeMappings name="N_SalleDescription" label="Description" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Salle">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Description: ' + self.description" labelPosition="node" resizeKind="NSEW">
+        <containerMappings name="C_Salle" label="Salle" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_Name']" domainClass="evilmasterbase::Salle" childrenPresentation="HorizontalStack">
+          <subContainerMappings name="C_InfoSalle" label="Infos Salle" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Salle" childrenPresentation="VerticalStack">
+            <subContainerMappings name="C_PrixSalle" label="Prix" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Salle" childrenPresentation="List">
+              <subNodeMappings name="N_PrixSalleLabel" label="Label Prix Salle" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_Price']" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Salle">
+                <style xsi:type="style:SquareDescription" labelSize="20" showIcon="false" labelExpression="aql: self.price" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Prix de la salle (k€)">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
               </style>
-            </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql: 'Prix: ' + self.price + 'k€'">
+            </subContainerMappings>
+            <subContainerMappings name="C_DescriptionSalle" label="Description" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Salle" childrenPresentation="List">
+              <subNodeMappings name="N_DescriptionSalleLabel" label="Label Description Salle" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_Description']" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Salle">
+                <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: self.description" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql: 'Description'">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </subContainerMappings>
+            <subContainerMappings name="C_TypeSalle" label="Type" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Salle">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="Type">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="20" showIcon="false" labelExpression="Infos">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
           </subContainerMappings>
-          <subContainerMappings name="C_Escouade" label="Escouade" semanticCandidatesExpression="feature:eAllContents" domainClass="evilmasterbase::Escouade" childrenPresentation="List">
-            <subNodeMappings name="N_EscouadePrice" label="Price" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Escouade">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Prix: ' + self.price + 'k€'" labelPosition="node" resizeKind="NSEW">
+          <subContainerMappings name="C_Escouade" label="Escouade" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_Name']" semanticCandidatesExpression="feature:eAllContents" domainClass="evilmasterbase::Escouade" childrenPresentation="VerticalStack">
+            <subContainerMappings name="C_PrixEscouade" label="Prix" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Escouade" childrenPresentation="List">
+              <subNodeMappings name="N_PrixEscouadeLabel" label="Label Prix Escouade" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_Price']" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Escouade">
+                <style xsi:type="style:SquareDescription" labelSize="20" showIcon="false" labelExpression="aql: self.price" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Prix (k€)">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
               </style>
-            </subNodeMappings>
-            <subNodeMappings name="N_EscouadeNombre" label="Nombre" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Escouade">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: self.nombre + ' membres'" labelPosition="node" resizeKind="NSEW">
+            </subContainerMappings>
+            <subContainerMappings name="C_NombreEscouade" label="Nombre" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Escouade" childrenPresentation="List">
+              <subNodeMappings name="N_NombreEscouadeLabel" label="Label Nombre Escouade" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_NombreEscouade']" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Escouade">
+                <style xsi:type="style:SquareDescription" labelSize="16" showIcon="false" labelExpression="aql: self.nombre" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Nombre de membres">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
               </style>
-            </subNodeMappings>
-            <subNodeMappings name="N_EscouadeArme" label="Arme" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Escouade">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Arme: ' + self.arme " labelPosition="node" resizeKind="NSEW">
+            </subContainerMappings>
+            <subContainerMappings name="C_ArmeEscouade" label="Arme" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Escouade" childrenPresentation="List">
+              <subNodeMappings name="N_ArmeEscouadeLabel" label="Label Arme Escouade" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_ArmeEscouade']" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Escouade">
+                <style xsi:type="style:SquareDescription" labelSize="16" showIcon="false" labelExpression="aql: self.arme" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Arme">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
               </style>
-            </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="20">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
           </subContainerMappings>
-          <subContainerMappings name="C_Piege" label="Piege" semanticCandidatesExpression="feature:eAllContents" domainClass="evilmasterbase::Piege" childrenPresentation="List">
-            <subNodeMappings name="N_PiegePrice" label="Price" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Piege">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Prix: ' + self.price + 'k€'" labelPosition="node" resizeKind="NSEW">
+          <subContainerMappings name="C_Piege" label="Piege" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_Name']" semanticCandidatesExpression="feature:eAllContents" domainClass="evilmasterbase::Piege" childrenPresentation="VerticalStack">
+            <subContainerMappings name="C_PrixPiege" label="Prix" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Piege" childrenPresentation="List">
+              <subNodeMappings name="N_PrixPiegeLabel" label="Label Prix Piege" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_Price']" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Piege">
+                <style xsi:type="style:SquareDescription" labelSize="20" showIcon="false" labelExpression="aql: self.price" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Prix (k€)">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
               </style>
-            </subNodeMappings>
-            <subNodeMappings name="N_PiegeDangerosite" label="Dangerosite" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Piege">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Dangerosite: ' + self.dangerosite" labelPosition="node" resizeKind="NSEW">
+            </subContainerMappings>
+            <subContainerMappings name="C_DangerositePiege" label="Dangerosite" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Piege" childrenPresentation="List">
+              <subNodeMappings name="N_DangerositePiegeLabel" label="Label Dangerosite Piege" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_DangerositePiege']" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Piege">
+                <style xsi:type="style:SquareDescription" labelSize="16" showIcon="false" labelExpression="aql: self.dangerosite" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Dangerosité">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
               </style>
-            </subNodeMappings>
-            <subNodeMappings name="N_PiegePosition" label="Position" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Piege">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Position: ' + self.position" labelPosition="node" resizeKind="NSEW">
+            </subContainerMappings>
+            <subContainerMappings name="C_PositionPiege" label="Position" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Piege" childrenPresentation="List">
+              <subNodeMappings name="N_PositionPiegeLabel" label="Label Position Piege" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_PositionPiege']" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Piege">
+                <style xsi:type="style:SquareDescription" labelSize="16" showIcon="false" labelExpression="aql: self.position" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Position">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
               </style>
-            </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="20">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="3" labelSize="20" roundedCorner="true">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
-          <conditionnalStyles predicateExpression="aql: self.name.contains(&quot;a&quot;)">
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" backgroundStyle="GradientTopToBottom">
+        </containerMappings>
+        <containerMappings name="C_Repere" label="Repere" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_Name']" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere" childrenPresentation="VerticalStack">
+          <subNodeMappings name="N_RepereTotalPrice" label="Total Price" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql: self.eAllContents().price->sum()" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subNodeMappings>
+          <subContainerMappings name="C_ReperePrice" label="Prix" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere" childrenPresentation="List">
+            <subNodeMappings name="BN_ReperePriceLabel" label="Label Prix Repere" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_Price']" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere">
+              <style xsi:type="style:SquareDescription" labelSize="20" showIcon="false" labelExpression="aql:self.price" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Prix de base (k€)">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
-          </conditionnalStyles>
-        </containerMappings>
-        <containerMappings name="C_Repere" label="Repere" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere" childrenPresentation="List">
-          <subNodeMappings name="N_ReperePrice" label="Price" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere">
-            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Prix de base: ' + self.price + 'k€'" labelPosition="node" resizeKind="NSEW">
+          </subContainerMappings>
+          <subContainerMappings name="C_RepereLocalisation" label="Localisation" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere" childrenPresentation="List">
+            <subNodeMappings name="N_RepereLocalisation" label="Label Emplacement Repere" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_Localisation']" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere">
+              <style xsi:type="style:SquareDescription" labelSize="16" showIcon="false" labelExpression="aql: self.localisation " labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Emplacement">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
-          </subNodeMappings>
-          <subNodeMappings name="N_RepereLocalisation" label="Localisation" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere">
-            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Emplacement: ' + self.localisation " labelPosition="node" resizeKind="NSEW">
+          </subContainerMappings>
+          <subContainerMappings name="C_RepereDescription" label="Description" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere" childrenPresentation="List">
+            <subNodeMappings name="N_RepereDescriptionLabel" label="Label Description Repere" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='D_Repere']/@defaultLayer/@toolSections.1/@ownedTools[name='DE_Description']" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere">
+              <style xsi:type="style:SquareDescription" labelSize="16" showIcon="false" labelExpression="aql: self.description " labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Description">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
-          </subNodeMappings>
-          <subNodeMappings name="N_RepereDescription" label="Description" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere">
-            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: 'Description: ' + self.description " labelPosition="node" resizeKind="NSEW">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-            </style>
-          </subNodeMappings>
-          <subNodeMappings name="N_RepereTotalPrice" label="Total Price" semanticCandidatesExpression="var:self" domainClass="evilmasterbase::Repere">
-            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: self.eAllContents().price->sum()" labelPosition="node" resizeKind="NSEW">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-            </style>
-          </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="20" roundedCorner="true">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
@@ -233,6 +331,54 @@
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="position" valueExpression="aql: 'Dans ' + container.name"/>
                 </subModelOperations>
               </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="DE_Name" label="Edit Name">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="DE_Price" label="Edit Price">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="price" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="DE_Description" label="Edit Description">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="description" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="DE_Localisation" label="Edit Localisation">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="localisation" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="DE_ArmeEscouade" label="Edit Arme Escouade">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="arme" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="DE_NombreEscouade" label="Edit Nombre Escouade">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="nombre" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="DE_DangerositePiege" label="Edit Dangerosite Piege">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="dangerosite" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="DE_PositionPiege" label="Edit Position Piege">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="position" valueExpression="var:0"/>
             </initialOperation>
           </ownedTools>
         </toolSections>

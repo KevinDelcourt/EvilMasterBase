@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<evilmasterbase:Repere xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:evilmasterbase="http://www.lpdql.org/evilmasterbase" name="IUT Info Paul Sabatier" price="100" description="Il est vieux" localisation="Sur le campus">
+  <salle xsi:type="evilmasterbase:Entree" name="Hall" price="60" description="Une entrée moche">
+    <escouade name="Zut" price="50" arme="Des balais" nombre="10"/>
+    <piege name="Machine à café empoisonnée" price="10" position="Devant la porte" dangerosite="20"/>
+  </salle>
+</evilmasterbase:Repere>

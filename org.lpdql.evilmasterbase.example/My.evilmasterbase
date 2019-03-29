@@ -1,33 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<evilmasterbase:Repere xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:evilmasterbase="http://www.lpdql.org/evilmasterbase" name="Repère du MAL" price="2" description="oui" localisation="ici">
+<evilmasterbase:Repere xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:evilmasterbase="http://www.lpdql.org/evilmasterbase" name="Repère maléfique" price="470" description="Un grand Repère sombre et humide." localisation="lfofof">
   <porte name="torture-banquets" price="8" salle1="//@salle.1" salle2="//@salle.0"/>
   <porte name="torture-couloir du mal" salle1="//@salle.1" salle2="//@salle.3"/>
-  <porte name="couloir du mal-armes" salle1="//@salle.3" salle2="//@salle.2"/>
+  <porte name="Porte blindée" salle1="//@salle.3" salle2="//@salle.2"/>
   <porte name="bureau Evil Master-banquets" salle1="//@salle.4" salle2="//@salle.0"/>
   <porte name="master-couloir" price="30" salle1="//@salle.5" salle2="//@salle.4"/>
   <porte name="couloir du master" price="30" salle1="//@salle.5" salle2="//@salle.1"/>
-  <porte name="hall-banquets" price="56" salle1="//@salle.6" salle2="//@salle.0"/>
+  <porte name="oui izfuehfiuz" price="56" salle1="//@salle.6" salle2="//@salle.0"/>
   <porte name="oui" price="1" salle1="//@salle.6" salle2="//@salle.7"/>
   <porte name="Porte 9" price="1" salle1="//@salle.8" salle2="//@salle.7"/>
   <porte name="Porte 10" price="1" salle1="//@salle.6" salle2="//@salle.8"/>
   <porte name="Porte 11" price="1" salle1="//@salle.0" salle2="//@salle.9"/>
-  <salle name="des banquets" price="3" description="abc">
-    <escouade name="e1" price="8" arme="feefef" nombre="7"/>
-    <escouade name="e2" price="8" arme="epee de la mort qui tue" nombre="4"/>
-    <piege name="p1" price="5" position="en haut" dangerosite="9"/>
+  <porte name="Porte 12" price="1" salle1="//@salle.9" salle2="//@salle.8"/>
+  <salle name="Salle des banquets" price="3" description="abc">
+    <escouade name="Petite Escouade" price="8" arme="feefef" nombre="7"/>
+    <escouade name="Grosse escouade" price="8" arme="epee de la mort qui tue" nombre="4"/>
+    <piege name="Petit Piège" price="5" position="en haut" dangerosite="9"/>
   </salle>
   <salle name="de torture" price="8" description="efze">
-    <escouade name="Escouade 9" price="50" arme="Pas armés" nombre="10"/>
+    <escouade name="Escouade 9" price="66" arme="Patates" nombre="200"/>
     <piege name="p5" price="6" position="en bas" dangerosite="98"/>
-    <piege name="Piege 3" price="30" position="Dans de torture" dangerosite="50"/>
-    <piege name="Piege 10" price="30" position="Dans de torture" dangerosite="50"/>
+    <piege name="Piege 3" price="30" position="Dans de torture" dangerosite="40"/>
+    <piege name="Piege 10" price="30" position="Par terre" dangerosite="50"/>
   </salle>
-  <salle name="des armes" description="">
+  <salle name="Salle d'arme" description="">
     <escouade name="Escouade 6" price="50" arme="Pas armés" nombre="10"/>
     <escouade name="Escouade 7" price="50" arme="Pas armés" nombre="10"/>
   </salle>
-  <salle xsi:type="evilmasterbase:Couloir" name="du mal" description="">
+  <salle xsi:type="evilmasterbase:Couloir" name="du mal" price="40" description="">
     <escouade name="Escouade 8" price="50" arme="Pas armés" nombre="10"/>
+    <piege name="Piege de la mort" price="30" position="Dans du mal" dangerosite="50"/>
+    <piege name="Piege 14" price="30" position="Dans du mal" dangerosite="50"/>
   </salle>
   <salle xsi:type="evilmasterbase:Bureau" name="bureau de Evil Master" price="1500" description="ne pas déranger sous peine de mort dans d'atroces souffrances">
     <escouade name="gardes du corps du EvilMaster" arme="lances empoisonnées" nombre="5"/>
@@ -35,24 +38,28 @@
     <piege name="Piege 2" price="30" position="A placer" dangerosite="50"/>
   </salle>
   <salle xsi:type="evilmasterbase:Couloir" name="couloir du master" price="460">
-    <escouade name="gardes de la salle du EvilMaster" price="45" arme="masses à pointes" nombre="15"/>
-    <piege name="piege final" price="678" position="dans le plafond" dangerosite="567"/>
-    <piege name="Piege 2" price="30" position="A placer" dangerosite="50"/>
+    <escouade name="gardes de la salle du EvilMaster" price="45" arme="masses à pointes" nombre="30"/>
+    <piege name="piege final" price="788" position="dans le plafond" dangerosite="899"/>
+    <piege name="Piege 2" price="30" position="Dans le mur de gauche" dangerosite="40"/>
     <piege name="Piege " price="30" position="Dans couloir du master" dangerosite="50"/>
   </salle>
   <salle xsi:type="evilmasterbase:Entree" name="Hall sombre" price="39" description="Entrée terrifiante">
     <escouade name="Escouade 5" price="50" arme="Pas armés" nombre="10"/>
-    <piege name="Escouade 4" price="50"/>
+    <piege name="Escouade 4" price="50" position="oui"/>
+    <piege name="Piege 16" price="30" position="Dans Hall sombre" dangerosite="50"/>
   </salle>
   <salle name="Salle 8">
     <escouade name="Escouade 10" price="50" arme="Pas armés" nombre="10"/>
   </salle>
   <salle name="Salle 9" price="20" description="Une tres belle salle">
     <escouade name="Escouade 11" price="50" arme="Pas armés" nombre="10"/>
+    <escouade name="Escouade 14" price="50" arme="Pas armés" nombre="10"/>
     <piege name="Piege 11" price="30" position="Dans Salle 9" dangerosite="50"/>
+    <piege name="Piege 15" price="30" position="Dans Salle 9" dangerosite="50"/>
   </salle>
-  <salle xsi:type="evilmasterbase:Entree" name="Entree 10" price="60" description="Une belle entrée">
+  <salle xsi:type="evilmasterbase:Entree" name="Super Entrée" price="20000" description="Avec une statue">
     <escouade name="Escouade 12" price="50" arme="Pas armés" nombre="10"/>
+    <escouade name="Escouade 13" price="50" arme="Oui" nombre="10"/>
     <piege name="Piege 13" price="30" position="Dans Entree 10" dangerosite="50"/>
   </salle>
 </evilmasterbase:Repere>
